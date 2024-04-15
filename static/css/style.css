@@ -483,7 +483,7 @@ Saas Landing CSS
 
 .saas-service-card .icon.bg-6 {
 	background-color: #e5fffa;
-	color: #58d7c1;
+	color: var(--green-accent-color);
 }
 
 .saas-service-card .icon i {
@@ -724,7 +724,7 @@ Saas Landing CSS
 
 .saas-features .icon.bg-3 {
 	background-color: #e5fffb;
-	color: #58d7c1;
+	color: var(--green-accent-color);
 }
 
 .saas-features .icon i {
@@ -777,19 +777,19 @@ Saas Landing CSS
 }
 
 .saas-feature-two .bg-1 {
-	background-color: #fa866b;
+	background-color: var(--red-accent-color);
 }
 
 .saas-feature-two .bg-2 {
-	background-color: #58d7c1;
+	background-color: var(--green-accent-color);
 }
 
 .saas-feature-two .bg-3 {
-	background-color: #f5d150;
+	background-color: var(--yellow-accent-color);
 }
 
 .saas-feature-two .bg-4 {
-	background-color: #fb9ed7;
+	background-color: var(--purple-accent-color);
 }
 
 .saas-feature-two h3 {
@@ -974,7 +974,7 @@ Saas Landing CSS
 	.text-icon-1 {
 	position: absolute;
 	font-size: 30px;
-	color: #ccd8fc;
+	color: var(--base-light-color);
 	left: -30px;
 	top: -15px;
 }
@@ -987,7 +987,7 @@ Saas Landing CSS
 	.text-icon-2 {
 	position: absolute;
 	font-size: 30px;
-	color: #ccd8fc;
+	color: var(--base-light-color);
 	right: -30px;
 	bottom: -15px;
 }
@@ -1228,37 +1228,37 @@ Saas Landing CSS
 }
 
 .footer-area .footer-widget .footer-social li a i.bg-1 {
-	background-color: #fa866b;
+	background-color: var(--red-accent-color);
 }
 
 .footer-area .footer-widget .footer-social li a i.bg-2 {
-	background-color: #f5d150;
+	background-color: var(--yellow-accent-color);
 	-webkit-box-shadow: 0px 6px 20px #ffd86e;
 	box-shadow: 0px 6px 20px #ffd86e;
 }
 
 .footer-area .footer-widget .footer-social li a i.bg-3 {
-	background-color: #58d7c1;
+	background-color: var(--green-accent-color);
 }
 
 .footer-area .footer-widget .footer-social li a i.bg-4 {
-	background-color: #fb9ed7;
+	background-color: var(--purple-accent-color);
 }
 
 .footer-area .footer-widget .footer-social li a:hover i.bg-1 {
-	background-color: #58d7c1;
+	background-color: var(--green-accent-color);
 }
 
 .footer-area .footer-widget .footer-social li a:hover i.bg-2 {
-	background-color: #fb9ed7;
+	background-color: var(--purple-accent-color);
 }
 
 .footer-area .footer-widget .footer-social li a:hover i.bg-3 {
-	background-color: #fa866b;
+	background-color: var(--red-accent-color);
 }
 
 .footer-area .footer-widget .footer-social li a:hover i.bg-4 {
-	background-color: #f5d150;
+	background-color: var(--yellow-accent-color);
 }
 
 .footer-area .footer-widget .title {
@@ -1309,11 +1309,11 @@ Saas Landing CSS
 }
 
 .footer-area .copyright-text p a {
-	color: #f5d150;
+	color: var(--yellow-accent-color);
 }
 
 .footer-area .copyright-text p a:hover {
-	color: #fa866b;
+	color: var(--red-accent-color);
 }
 
 /* Custom Modal */
@@ -1901,7 +1901,7 @@ SEO Marketing CSS
 
 .choose-card i.bg-4 {
 	background-color: #e5fffb;
-	color: #58d7c1;
+	color: var(--green-accent-color);
 }
 
 .choose-card h3 {
@@ -2028,7 +2028,7 @@ SEO Marketing CSS
 }
 
 .our-service-card i.bg-3 {
-	background-color: #fb9ed7;
+	background-color: var(--purple-accent-color);
 }
 
 .our-service-card i.bg-4 {
@@ -2040,7 +2040,7 @@ SEO Marketing CSS
 }
 
 .our-service-card i.bg-6 {
-	background-color: #58d7c1;
+	background-color: var(--green-accent-color);
 }
 
 .our-service-card i i {
@@ -2546,7 +2546,7 @@ Startup Agency CSS
 
 .why-choose-card i.bg-3 {
 	background-color: #e5fffb;
-	color: #58d7c1;
+	color: var(--green-accent-color);
 }
 
 .why-choose-card i.bg-4 {
@@ -2556,7 +2556,7 @@ Startup Agency CSS
 
 .why-choose-card i.bg-5 {
 	background-color: #ffe5f5;
-	color: #fb9ed7;
+	color: var(--purple-accent-color);
 }
 
 .why-choose-card i.bg-6 {
@@ -2819,10 +2819,11 @@ Personal Portfolio CSS
 	color: var(--yellow-accent-color);
 	display: inline-block;
 	margin-bottom: 10px;
+	font-weight: 600;
 }
 
 .personal-banner-area .personal-bennr-text h1 {
-	font-size: 70px;
+	font-size: 50px;
 	color: #ffffff;
 	margin-bottom: 15px;
 	line-height: 1;
@@ -3394,9 +3395,9 @@ App Landing CSS
 }
 
 .easy-step-area .easy-step-img .step-1 {
-	-webkit-box-shadow: 0px 0px 20px #dddddd;
-	box-shadow: 0px 0px 20px #dddddd;
-	border-radius: 70px;
+	-webkit-box-shadow: 0px 0px 20px #0e3a5f;
+	box-shadow: 0px 0px 20px #0e3a5f;
+	border-radius: 16px;
 }
 
 .easy-step-area .easy-step-img .shape-1 {
@@ -3466,7 +3467,7 @@ App Landing CSS
 }
 
 .easy-step-area .easy-step-card .step-signle-card i.bg-3 {
-	background-color: #fb9ed7;
+	background-color: var(--purple-accent-color);
 }
 
 .easy-step-area .easy-step-card .step-signle-card span {
@@ -3525,19 +3526,19 @@ App Landing CSS
 }
 
 .powerful-area .powerful-card i.bg-1 {
-	background-color: #fa866b;
+	background-color: var(--red-accent-color);
 }
 
 .powerful-area .powerful-card i.bg-2 {
-	background-color: #f5d150;
+	background-color: var(--yellow-accent-color);
 }
 
 .powerful-area .powerful-card i.bg-3 {
-	background-color: #58d7c1;
+	background-color: var(--green-accent-color);
 }
 
 .powerful-area .powerful-card i.bg-4 {
-	background-color: #fb9ed7;
+	background-color: var(--purple-accent-color);
 }
 
 .powerful-area .powerful-card h3 {
@@ -3674,7 +3675,7 @@ App Landing CSS
 	bottom: 35px;
 	right: 60px;
 	font-size: 40px;
-	color: #aabef9;
+	color: #5fabb3;
 }
 
 .clients-slider-two-area .clients-slider-two.owl-theme .owl-dots {
