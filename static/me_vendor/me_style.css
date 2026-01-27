@@ -282,3 +282,49 @@ h5 {
 		left: -31.8px;
 	}
 }
+
+.me_article_img {
+	width: 100%;
+	border-radius: 8px;
+	margin-bottom: 15px;
+	object-fit: cover;
+	max-height: 200px;
+}
+
+.me_project_date {
+	display: block;
+	font-size: 13px;
+	color: #ddd;
+	margin-bottom: 10px;
+}
+
+.case-study-card {
+	height: 100%;
+}
+
+.case-study-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.case-study-area .col-lg-3,
+.case-study-area .col-sm-6 {
+	margin-bottom: 30px;
+	display: flex;
+}
+
+.our-service-card {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.our-service-card h3 {
+	flex-grow: 1;
+}
+
+.our-service-card .me_article_img {
+	height: 180px;
+	object-fit: cover;
+}

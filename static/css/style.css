@@ -27,12 +27,15 @@ This files table contents are outlined below>>>>>
 ** - Go top CSS
 
 *******************************************
-/*
+*/
 
 /*================================================
 Default CSS
 =================================================*/
-@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: "Sarabun", sans-serif;
 	font-size: 16px;
@@ -64,6 +67,12 @@ a:hover {
 
 button:focus {
 	outline: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+	outline: 2px solid var(--base-light-color, #0f8e9c);
+	outline-offset: 2px;
 }
 
 p {
@@ -137,6 +146,52 @@ p:last-child {
 	/* max-width: 525px; */
 	max-width: 660px;
 	margin: auto;
+}
+
+/* Skip link */
+.skip-link {
+	position: absolute;
+	top: -100%;
+	left: 0;
+	background: var(--base-light-color, #0f8e9c);
+	color: #fff;
+	padding: 8px 16px;
+	z-index: 10000;
+	font-weight: 600;
+}
+
+.skip-link:focus {
+	top: 0;
+}
+
+/* Reveal animation (replaces WOW.js + Animate.css) */
+.reveal {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.revealed {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	.reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }
 
 /*================================================
@@ -308,7 +363,6 @@ Personal Portfolio CSS
 
 /* Personal Banner Area */
 .personal-banner-area {
-	/* background-image: url("../avatar/portfolio-bg2.svg"); */
 	background-size: cover;
 	background-position: center center;
 	padding-top: 180px;
@@ -319,31 +373,6 @@ Personal Portfolio CSS
 
 .personal-banner-area .personal-banner-img {
 	position: relative;
-}
-
-.personal-banner-area .personal-banner-img .personal-shape .shape-24 {
-	position: absolute;
-	top: 0;
-	left: -60px;
-	-webkit-animation: animationFramesOne 20s infinite linear;
-	animation: animationFramesOne 20s infinite linear;
-}
-
-.personal-banner-area .personal-banner-img .personal-shape .shape-2 {
-	position: absolute;
-	bottom: 50px;
-	left: -80px;
-	-webkit-animation: animationFramesOne 20s infinite linear;
-	animation: animationFramesOne 20s infinite linear;
-}
-
-.personal-banner-area .personal-banner-img .personal-shape .shape-13 {
-	position: absolute;
-	bottom: -35px;
-	right: -55px;
-	z-index: -1;
-	-webkit-animation: moveLeftBounce 3s linear infinite;
-	animation: moveLeftBounce 3s linear infinite;
 }
 
 .personal-banner-area .personal-bennr-text {
@@ -413,52 +442,6 @@ Personal Portfolio CSS
 	color: #ffffff;
 }
 
-.personal-banner-area .personal-bennr-text .personal-text-shape .shape-2 {
-	position: absolute;
-	bottom: -140px;
-	right: 0;
-	-webkit-animation: animationFramesOne 20s infinite linear;
-	animation: animationFramesOne 20s infinite linear;
-}
-
-.personal-banner-area .personal-bennr-text .personal-text-shape .shape-14 {
-	position: absolute;
-	bottom: 25px;
-	right: -90px;
-	-webkit-animation: moveLeftBounce 3s linear infinite;
-	animation: moveLeftBounce 3s linear infinite;
-}
-
-.personal-banner-area .personal-bennr-text .personal-text-shape .shape-4 {
-	position: absolute;
-	top: -130px;
-	right: 0;
-	-webkit-animation: animationFramesOne 20s infinite linear;
-	animation: animationFramesOne 20s infinite linear;
-}
-
-.personal-banner-area .personal-bennr-text .personal-text-shape .shape-22 {
-	position: absolute;
-	top: -40px;
-	right: -100px;
-	-webkit-animation: moveLeftBounce 3s linear infinite;
-	animation: moveLeftBounce 3s linear infinite;
-}
-
-.personal-banner-area .personal-bennr-text .personal-text-shape .shape-23 {
-	position: absolute;
-	top: -130px;
-	left: 20px;
-	-webkit-animation-name: rotateme;
-	animation-name: rotateme;
-	-webkit-animation-duration: 20s;
-	animation-duration: 20s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
-}
-
 /* Features Area CSS */
 .features-area {
 	background-color: #f9f9f9;
@@ -475,22 +458,6 @@ Personal Portfolio CSS
 .features-area .features-contant {
 	position: relative;
 	z-index: 1;
-}
-
-.features-area .features-contant .features-shape {
-	position: absolute;
-	max-width: 440px;
-	bottom: 0;
-	left: 0;
-	z-index: -1;
-	-webkit-animation-name: rotateme;
-	animation-name: rotateme;
-	-webkit-animation-duration: 20s;
-	animation-duration: 20s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
 }
 
 /* SaaS Features (used for smart home feature cards) */
@@ -611,27 +578,22 @@ Personal Portfolio CSS
 	position: relative;
 }
 
-.clients-area .clients-slider {
-	position: relative;
-}
-
-.clients-area .clients-slider .clients-slider-item .client-text {
+.clients-area .clients-slider-item .client-text {
 	padding-left: 30px;
 	padding-right: 30px;
 }
 
-.clients-area .clients-slider .clients-slider-item .client-text .text {
+.clients-area .clients-slider-item .client-text .text {
 	position: relative;
 }
 
-.clients-area .clients-slider .clients-slider-item .client-text .text p {
+.clients-area .clients-slider-item .client-text .text p {
 	font-size: 20px;
 	font-weight: 400;
 	color: #242424;
 }
 
 .clients-area
-	.clients-slider
 	.clients-slider-item
 	.client-text
 	.text
@@ -644,7 +606,6 @@ Personal Portfolio CSS
 }
 
 .clients-area
-	.clients-slider
 	.clients-slider-item
 	.client-text
 	.text
@@ -656,89 +617,40 @@ Personal Portfolio CSS
 	bottom: -15px;
 }
 
-.clients-area .clients-slider .clients-slider-item .client-text .rating {
+.clients-area .clients-slider-item .client-text .rating {
 	margin-bottom: 10px;
 	color: #ffc700;
 }
 
-.clients-area .clients-slider .clients-slider-item .client-text h3 {
+.clients-area .clients-slider-item .client-text h3 {
 	font-size: 20px;
 	margin-bottom: 5px;
 }
 
-.clients-area .clients-slider .clients-slider-item .client-text span {
+.clients-area .clients-slider-item .client-text span {
 	font-size: 12px;
 	font-weight: 400;
 }
 
-.clients-area .clients-slider .clients-slider-item .client-image {
+.clients-area .clients-slider-item .client-image {
 	max-width: 40rem;
 	max-height: 35rem;
 	margin: auto;
 }
 
-.clients-area .clients-slider .clients-slider-item .client-image img {
+.clients-area .clients-slider-item .client-image img {
 	border-radius: 5px;
 }
 
-.clients-area .clients-slider.owl-theme .owl-nav {
-	margin: 0;
-	text-align: left;
-	position: absolute;
-	left: 30px;
-	bottom: 0;
-}
-
-.clients-area .clients-slider.owl-theme .owl-nav .owl-prev,
-.clients-area .clients-slider.owl-theme .owl-nav .owl-next {
-	font-size: 25px;
-	line-height: 1;
+/* Swiper nav styling for clients area */
+.clients-swiper .swiper-button-prev,
+.clients-swiper .swiper-button-next {
 	color: #242424;
-	margin: 0 5px;
 }
 
-.clients-area .clients-slider.owl-theme .owl-nav .owl-prev:hover,
-.clients-area .clients-slider.owl-theme .owl-nav .owl-next:hover {
-	background-color: transparent;
+.clients-swiper .swiper-button-prev:hover,
+.clients-swiper .swiper-button-next:hover {
 	color: var(--base-light-color);
-}
-
-.clients-area .claint-shape {
-	position: absolute;
-	right: 0;
-	margin: auto;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.clients-area .claint-shape .shape-9 {
-	max-width: 550px;
-	-webkit-animation-name: rotateme;
-	animation-name: rotateme;
-	-webkit-animation-duration: 20s;
-	animation-duration: 20s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
-}
-
-.clients-area .claint-shape .shape-10 {
-	position: absolute;
-	bottom: 55px;
-	max-width: 550px;
-	right: 120px;
-	z-index: -1;
-	-webkit-animation: moveLeftBounce 3s linear infinite;
-	animation: moveLeftBounce 3s linear infinite;
-}
-
-.clients-area .claint-shape .shape-2 {
-	position: absolute;
-	bottom: 55px;
-	right: 0;
-	z-index: -1;
 }
 
 /* Our Services Area */
@@ -870,7 +782,9 @@ Personal Portfolio CSS
 }
 
 .case-study-card .caption .study-text a:hover {
-	color: #242424;
+	color: #e0f0ff;
+	text-decoration: underline;
+	opacity: 0.85;
 }
 
 .case-study-card .caption .study-text h3 {
@@ -980,21 +894,6 @@ Personal Portfolio CSS
 	z-index: 1;
 }
 
-.service-shape .our-service-shape {
-	position: absolute;
-	bottom: 380px;
-	right: 80px;
-	z-index: -1;
-	-webkit-animation-name: rotateme;
-	animation-name: rotateme;
-	-webkit-animation-duration: 20s;
-	animation-duration: 20s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
-}
-
 /* Easy Step Area */
 .easy-step-area .easy-step-img {
 	position: relative;
@@ -1005,30 +904,6 @@ Personal Portfolio CSS
 	-webkit-box-shadow: 0px 0px 20px #0e3a5f;
 	box-shadow: 0px 0px 20px #0e3a5f;
 	border-radius: 16px;
-}
-
-.easy-step-area .easy-step-img .shape-1 {
-	position: absolute;
-	top: -50px;
-	left: -80px;
-	z-index: -1;
-	-webkit-animation: moveLeftBounce 3s linear infinite;
-	animation: moveLeftBounce 3s linear infinite;
-}
-
-.easy-step-area .easy-step-img .shape-21 {
-	position: absolute;
-	right: 60px;
-	bottom: -40px;
-	z-index: -1;
-	-webkit-animation-name: rotateme;
-	animation-name: rotateme;
-	-webkit-animation-duration: 20s;
-	animation-duration: 20s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
 }
 
 .easy-step-area .easy-step-card {
@@ -1157,12 +1032,6 @@ Personal Portfolio CSS
 	color: #f4f6ff;
 }
 
-.powerful-area .powerful-img img {
-	/* -webkit-box-shadow: 1px 20px 20px #dddddd;
-	box-shadow: 1px 20px 20px #dddddd;
-	border-radius: 65px; */
-}
-
 /* Perfect Area */
 .perfect-area .perfect-img {
 	position: relative;
@@ -1175,22 +1044,6 @@ Personal Portfolio CSS
 	border-radius: 65px;
 	max-width: 400px;
 	width: 100%;
-}
-
-.perfect-area .perfect-img .perfect-shape {
-	position: absolute;
-	left: -200px;
-	bottom: 0;
-	max-width: 400px;
-	z-index: -1;
-	-webkit-animation-name: rotateme;
-	animation-name: rotateme;
-	-webkit-animation-duration: 20s;
-	animation-duration: 20s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
 }
 
 .perfect-area .section-title {
@@ -1232,113 +1085,32 @@ Personal Portfolio CSS
 	position: relative;
 }
 
-.clients-slider-two-area .clients-slider-two .slider-two-item {
-	background-color: #fff;
-	max-width: 570px;
-	-webkit-box-shadow: 0px 0px 20px #dddddd;
-	box-shadow: 0px 0px 20px #dddddd;
-	border-radius: 10px;
-	padding: 60px 35px;
-	position: relative;
-	margin: 15px 15px 30px 15px;
-	z-index: 5;
-}
-
-.clients-slider-two-area .clients-slider-two .slider-two-item img {
-	border-radius: 50%;
-	border: 3px solid var(--base-light-color);
-	position: absolute;
-	top: 40px;
-	right: 35px;
-	width: 70px;
-	height: 70px;
-}
-
-.clients-slider-two-area .clients-slider-two .slider-two-item h3 {
-	font-size: 20px;
-	margin-bottom: 5px;
-}
-
-.clients-slider-two-area .clients-slider-two .slider-two-item p {
-	margin: 0;
-}
-
-.clients-slider-two-area .clients-slider-two .slider-two-item span {
-	font-size: 14px;
-}
-
-.clients-slider-two-area .clients-slider-two .slider-two-item .rating {
-	color: #ffc700;
-	margin-top: 10px;
-	margin-bottom: 5px;
-}
-
-.clients-slider-two-area .clients-slider-two .slider-two-item .clients-icon {
-	position: absolute;
-	bottom: 35px;
-	right: 60px;
-	font-size: 40px;
-	color: #5fabb3;
-}
-
-.clients-slider-two-area .clients-slider-two.owl-theme .owl-dots {
-	line-height: 1;
-}
-
-.clients-slider-two-area .clients-slider-two.owl-theme .owl-dots .owl-dot span {
-	background-color: var(--base-light-color);
-	height: 12px;
-	width: 12px;
-	margin: 0 6px;
-}
-
-.clients-slider-two-area
-	.clients-slider-two.owl-theme
-	.owl-dots
-	.owl-dot.active
-	span {
-	background-color: var(--base-light-color);
-	width: 50px;
-	height: 12px;
-}
-
-.clients-slider-two-area .client-shape {
-	position: absolute;
-	bottom: 120px;
-	right: 30px;
-	z-index: -1;
-}
-
 /* Screens Slider Area */
 .screens-slider-area {
 	background-color: #f9fdff;
 }
 
-.screens-slider-area .screens-slider .screen-slider-item {
+.screens-slider-area .screen-slider-item {
 	margin: 15px;
 }
 
-.screens-slider-area .screens-slider .screen-slider-item img {
+.screens-slider-area .screen-slider-item img {
 	-webkit-box-shadow: 0px 0px 20px #d3d7e2;
 	box-shadow: 0px 0px 20px #d3d7e2;
 	border-radius: 30px;
 }
 
-.screens-slider-area .screens-slider.owl-theme .owl-dots {
-	line-height: 1;
-}
-
-.screens-slider-area .screens-slider.owl-theme .owl-dots .owl-dot span {
+/* Swiper pagination dots styling */
+.swiper-pagination-bullet {
 	background-color: var(--base-light-color);
-	height: 12px;
 	width: 12px;
-	margin: 0 6px;
+	height: 12px;
 }
 
-.screens-slider-area .screens-slider.owl-theme .owl-dots .owl-dot.active span {
+.swiper-pagination-bullet-active {
 	background-color: var(--base-light-color);
 	width: 50px;
-	height: 12px;
+	border-radius: 6px;
 }
 
 /* Utility class for feature card padding */
@@ -1347,139 +1119,7 @@ Personal Portfolio CSS
 	padding: 1rem;
 }
 
-/* Shape rotate */
-.rotateme {
-	-webkit-animation-name: rotateme;
-	animation-name: rotateme;
-	-webkit-animation-duration: 40s;
-	animation-duration: 40s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
-}
-
-@keyframes rotateme {
-	from {
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
-}
-
-@-webkit-keyframes rotateme {
-	from {
-		-webkit-transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(360deg);
-	}
-}
-
-@-webkit-keyframes rotate3d {
-	0% {
-		-webkit-transform: rotateY(0deg);
-		transform: rotateY(0deg);
-	}
-	100% {
-		-webkit-transform: rotateY(360deg);
-		transform: rotateY(360deg);
-	}
-}
-
-@keyframes rotate3d {
-	0% {
-		-webkit-transform: rotateY(0deg);
-		transform: rotateY(0deg);
-	}
-	100% {
-		-webkit-transform: rotateY(360deg);
-		transform: rotateY(360deg);
-	}
-}
-
-@keyframes animationFramesOne {
-	0% {
-		-webkit-transform: translate(0px, 0px) rotate(0deg);
-		transform: translate(0px, 0px) rotate(0deg);
-	}
-	20% {
-		-webkit-transform: translate(73px, -1px) rotate(36deg);
-		transform: translate(73px, -1px) rotate(36deg);
-	}
-	40% {
-		-webkit-transform: translate(141px, 72px) rotate(72deg);
-		transform: translate(141px, 72px) rotate(72deg);
-	}
-	60% {
-		-webkit-transform: translate(83px, 122px) rotate(108deg);
-		transform: translate(83px, 122px) rotate(108deg);
-	}
-	80% {
-		-webkit-transform: translate(-40px, 72px) rotate(144deg);
-		transform: translate(-40px, 72px) rotate(144deg);
-	}
-	100% {
-		-webkit-transform: translate(0px, 0px) rotate(0deg);
-		transform: translate(0px, 0px) rotate(0deg);
-	}
-}
-
-@-webkit-keyframes animationFramesOne {
-	0% {
-		-webkit-transform: translate(0px, 0px) rotate(0deg);
-	}
-	20% {
-		-webkit-transform: translate(73px, -1px) rotate(36deg);
-	}
-	40% {
-		-webkit-transform: translate(141px, 72px) rotate(72deg);
-	}
-	60% {
-		-webkit-transform: translate(83px, 122px) rotate(108deg);
-	}
-	80% {
-		-webkit-transform: translate(-40px, 72px) rotate(144deg);
-	}
-	100% {
-		-webkit-transform: translate(0px, 0px) rotate(0deg);
-	}
-}
-
-@-webkit-keyframes ripple-white {
-	0% {
-		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2),
-			0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.2);
-		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2),
-			0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.2);
-	}
-	100% {
-		-webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2),
-			0 0 0 40px rgba(255, 255, 255, 0.2), 0 0 0 60px rgba(255, 255, 255, 0);
-		box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2),
-			0 0 0 40px rgba(255, 255, 255, 0.2), 0 0 0 60px rgba(255, 255, 255, 0);
-	}
-}
-
-@keyframes ripple-white {
-	0% {
-		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2),
-			0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.2);
-		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2),
-			0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.2);
-	}
-	100% {
-		-webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2),
-			0 0 0 40px rgba(255, 255, 255, 0.2), 0 0 0 60px rgba(255, 255, 255, 0);
-		box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2),
-			0 0 0 40px rgba(255, 255, 255, 0.2), 0 0 0 60px rgba(255, 255, 255, 0);
-	}
-}
-
-/* End Shape rotate */
+/* Kept animations */
 @-webkit-keyframes moveBounce {
 	0% {
 		-webkit-transform: translateY(0px);
@@ -1509,36 +1149,6 @@ Personal Portfolio CSS
 	}
 }
 
-@-webkit-keyframes moveLeftBounce {
-	0% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-	50% {
-		-webkit-transform: translateX(5px);
-		transform: translateX(5px);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
-@keyframes moveLeftBounce {
-	0% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-	50% {
-		-webkit-transform: translateX(5px);
-		transform: translateX(5px);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
 @keyframes ripple {
 	0% {
 		-webkit-transform: scale(1);
@@ -1553,148 +1163,5 @@ Personal Portfolio CSS
 		-webkit-transform: scale(2);
 		transform: scale(2);
 		opacity: 0;
-	}
-}
-
-@-webkit-keyframes rotateMe {
-	from {
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes rotateMe {
-	from {
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
-}
-
-@-webkit-keyframes moveScale {
-	0% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
-	50% {
-		-webkit-transform: scale(0.8);
-		transform: scale(0.8);
-	}
-	100% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
-}
-
-@keyframes moveScale {
-	0% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
-	50% {
-		-webkit-transform: scale(0.8);
-		transform: scale(0.8);
-	}
-	100% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
-}
-
-@-webkit-keyframes sk-bouncedelay {
-	0%,
-	80%,
-	100% {
-		-webkit-transform: scale(0);
-		transform: scale(0);
-	}
-	40% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
-}
-
-@keyframes sk-bouncedelay {
-	0%,
-	80%,
-	100% {
-		-webkit-transform: scale(0);
-		transform: scale(0);
-	}
-	40% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
-}
-
-@keyframes animationFramesOne {
-	0% {
-		-webkit-transform: translate(0px, 0px) rotate(0deg);
-		transform: translate(0px, 0px) rotate(0deg);
-	}
-	20% {
-		-webkit-transform: translate(73px, -1px) rotate(36deg);
-		transform: translate(73px, -1px) rotate(36deg);
-	}
-	40% {
-		-webkit-transform: translate(141px, 72px) rotate(72deg);
-		transform: translate(141px, 72px) rotate(72deg);
-	}
-	60% {
-		-webkit-transform: translate(83px, 122px) rotate(108deg);
-		transform: translate(83px, 122px) rotate(108deg);
-	}
-	80% {
-		-webkit-transform: translate(-40px, 72px) rotate(144deg);
-		transform: translate(-40px, 72px) rotate(144deg);
-	}
-	100% {
-		-webkit-transform: translate(0px, 0px) rotate(0deg);
-		transform: translate(0px, 0px) rotate(0deg);
-	}
-}
-
-@-webkit-keyframes lds-hourglass {
-	0% {
-		-webkit-transform: rotate(0);
-		transform: rotate(0);
-		-webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-		animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-	}
-	50% {
-		-webkit-transform: rotate(900deg);
-		transform: rotate(900deg);
-		-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-	}
-	100% {
-		-webkit-transform: rotate(1800deg);
-		transform: rotate(1800deg);
-	}
-}
-
-@keyframes lds-hourglass {
-	0% {
-		-webkit-transform: rotate(0);
-		transform: rotate(0);
-		-webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-		animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-	}
-	50% {
-		-webkit-transform: rotate(900deg);
-		transform: rotate(900deg);
-		-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-	}
-	100% {
-		-webkit-transform: rotate(1800deg);
-		transform: rotate(1800deg);
 	}
 }

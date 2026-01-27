@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 	<link rel="stylesheet" href="static/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="static/css/animate.min.css" />
+	<link rel="stylesheet" href="static/css/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="static/css/magnific-popup.css" />
-	<link rel="stylesheet" href="static/css/owl.carousel.min.css" />
-	<link rel="stylesheet" href="static/css/owl.theme.default.min.css" />
 	<link rel="stylesheet" href="static/css/line-awesome.min.css" />
-	<link rel="stylesheet" href="static/css/style.css" />
 	<link rel="stylesheet" href="static/css/bootstrap-timeline.min.css" />
+	<link rel="stylesheet" href="static/css/style.css" />
 	<link rel="icon" type="image/png" href="static/avatar/me_logo.svg" />
 
 	<link rel="stylesheet" href="static/me_vendor/me_style.css" />
@@ -19,7 +21,9 @@
 	<title>Software Engineer | Muhammetberdi Jepbarov</title>
 </head>
 
-<body data-spy="scroll" data-offset="70">
+<body data-bs-spy="scroll" data-bs-offset="70">
+	<a href="#main" class="skip-link">Skip to main content</a>
+
 	<!-- Nabvar Area -->
 	<nav class="navbar fixed-top navbar-expand-md main-navbar personal-nav">
 		<div class="container">
@@ -27,7 +31,7 @@
 				<img src="static/avatar/me_logo_white.svg" alt="logo" style="height: 40px" />
 			</a>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="icon-bar top-bar"></span>
 				<span class="icon-bar middle-bar"></span>
@@ -35,7 +39,7 @@
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
+				<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
 						<a class="nav-link" href="#main">Main</a>
 					</li>
@@ -54,6 +58,9 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#volunteering">Volunteering</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#articles">Articles</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -68,33 +75,17 @@
 				<div class="col-lg-6">
 					<div class="personal-banner-img">
 						<img loading="lazy" src="https://avatars.githubusercontent.com/u/59872146?v=4" alt="Image" class="me_avatar_img" />
-						<div class="personal-shape">
-							<img loading="lazy" src="static/images/shape/shape24.png" class="shape-24" alt="Shape" />
-							<img loading="lazy" src="static/images/shape/shape2.png" class="shape-2" alt="Shape" />
-							<img loading="lazy" src="static/images/shape/shape13.png" class="shape-13" alt="Shape" />
-						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="personal-bennr-text">
 						<span>Welcome to my humble potfolio </span>
 						<h1>Muhammetberdi Jepbarov</h1>
-						<h3>Backend Engineer | DevSecOps</h3>
-						<!-- <p>
-							Software Engineer | 5+ Years of Experience | STEM Trainer | Project Management & Problem Solving | Building Erkin Ugur IT Courses & Podcasts | Infrastructure Engineering, DevOps, Automation, CI/CD
-						</p> -->
+						<h3>Software Engineer | DevOps | GDG Organizer</h3>
 
 						<div class="personal-btn">
-							<a href="https://drive.google.com/file/d/1zg-VFE08Y0ONtVOv9eyFxhpejBs3vs4K/view?usp=sharing" class="default-btn personal-btn-1 mr-3">Download
+							<a href="https://drive.google.com/file/d/1zg-VFE08Y0ONtVOv9eyFxhpejBs3vs4K/view?usp=sharing" class="default-btn personal-btn-1 me-3">Download
 								CV</a>
-						</div>
-
-						<div class="personal-text-shape">
-							<img loading="lazy" src="static/images/shape/shape2.png" class="shape-2" alt="Image" />
-							<img loading="lazy" src="static/images/shape/shape14.png" class="shape-14" alt="Image" />
-							<img loading="lazy" src="static/images/shape/shape4.png" class="shape-4" alt="Image" />
-							<img loading="lazy" src="static/images/shape/shape22.png" class="shape-22" alt="Image" />
-							<img loading="lazy" src="static/images/shape/shape23.png" class="shape-23" alt="Image" />
 						</div>
 					</div>
 				</div>
@@ -108,20 +99,19 @@
 
 
 	<!-- Basic Information Area -->
-	<div class="information-area pt-70">
+	<div class="information-area pt-70 reveal">
 		<div class="container me_projects_container">
 			<div class="section-title row me_basic_info_row">
 				<div class="col-lg-8 col-md-8 col-sm-6">
 					<h2>My Basic Information</h2>
 					<p style="text-align: left;">
 
-						<br><b>Skills:</b> Specialize in secure, performant network applications, microservice design,
-						cybersecurity, DevOps, Project Management.
-						<br><b>Experience:</b> Led a development team, delivering up to 16 production projects.
-						<br><b>Technical:</b> Proficient in project tracking, SCRUM management, and secure deployment.
-						<br><b>Innovation:</b> Built IoT-integrated electronic devices during university studies.
-						<br><b>Communication:</b> Excellent at bridging between managers and developers.
-						<br>I bring a blend of technical expertise, leadership, management and effective communication to the table. 🚀
+						<br><b>Skills:</b> Go, Python, TypeScript, Docker, CI/CD, Kubernetes, microservices, IoT, cloud infrastructure, API security.
+						<br><b>Experience:</b> 5+ years building high-load systems in logistics, e-commerce, fintech, and IoT. Led teams of up to 10 engineers, delivering 20+ production projects.
+						<br><b>DevOps:</b> Docker containerization, CI/CD pipelines, Linux administration, monitoring with Prometheus, infrastructure security.
+						<br><b>Community:</b> GDG Ashgabat Organizer, 20+ technical articles on Medium, 45+ tutorial videos, mentor at NASA Space Apps &amp; Technovation Girls.
+						<br><b>Innovation:</b> Built and deployed Smart Home IoT systems in real apartments, from Arduino prototypes to production-grade systems.
+						<br>I bring a blend of technical expertise, leadership, and community impact to every project.
 					</p>
 					<div class="me_personal_skills">
 						<h4>My personal skills:</h4>
@@ -152,50 +142,85 @@
 						<div id="content">
 							<ul class="timeline-1 text-black">
 
-
 								<li class="event" data-date="07/2024 - Present">
 									<div class="row">
 										<div class="col-md-2 col-sm-12 d-flex justify-content-center">
-											<img loading="lazy" src="static/me_logos/ynamly_belentlik.png" style="border-radius: 50rem;" alt="Ynamly Belentlik logo">
+											<img loading="lazy" src="static/me_logos/ynamly_belentlik.webp" style="border-radius: 50rem;" alt="Ynamly Belentlik logo">
 										</div>
 										<div class="col-md-10 col-sm-12">
 											<div class="mb-3 d-flex align-items-center">
-												<h5>Ynamly Belentlik</h5><span>|</span><span>On Site</span>
+												<h5>Ynamly Belentlik</h5><span>|</span><span>Full-time</span>
 											</div>
-											<p>Software Engineer | Project Manager
+											<p>Software Engineer</p>
 											<ul>
-												<li>Developed an international-standard on-boarding process, boosting team integration.</li>
-												<li>Improved up to 7 projects including Systems and Software Engineering, IoT and maintained successful deployment through collaboration with software teams and managers.</li>
-												<li>Produced "Erkin Ugur" podcasts and courses to support IT community growth, more than 45 videos published.</li>
+												<li>Led secure API infrastructure for 7+ enterprise projects with OAuth and SSL/TLS, serving 6K+ weekly users at 99%+ uptime.</li>
+												<li>Lead engineer for Milli Home IoT System and papirus.tm document workflow.</li>
+												<li>Reduced translation workload by 50% via custom AI-powered CLI tool.</li>
+												<li>Deployed corporate Wiki, managed international B2B partnerships.</li>
 											</ul>
-											</p>
 											<a href="https://belentlik.tm/" target="_blank"><span class="me_see_project_link">- visit the website</span></a>
 										</div>
 									</div>
 								</li>
 
-
-								<li class="event" data-date="07/2024 - 07/2024">
+								<li class="event" data-date="08/2024 - Present">
 									<div class="row">
 										<div class="col-md-2 col-sm-12 d-flex justify-content-center">
-											<img loading="lazy" src="static/me_logos/American_Councils.jpg" style="border-radius: 50rem;" alt="American Councils logo">
+											<img loading="lazy" src="static/me_logos/erkin_ugur.webp" style="border-radius: 50rem;" alt="Erkin Ugur logo">
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<div class="mb-3 d-flex align-items-center">
+												<h5>Erkin Ugur</h5><span>|</span><span>Contract</span>
+											</div>
+											<p>Senior Project Coordinator</p>
+											<ul>
+												<li>Produced 45+ tutorial videos and IT courses, reaching 6K+ weekly views and 10 new subscribers per week.</li>
+												<li>Managed marketing and development teams for EdTech platform.</li>
+												<li>Collaborated with local experts to produce international IT skills courses.</li>
+											</ul>
+											<a href="https://erkinugur.com.tm/" target="_blank"><span class="me_see_project_link">- visit the platform</span></a>
+											<br><a href="https://youtube.com/@erkinugurtm" target="_blank"><span class="me_see_project_link">- YouTube channel</span></a>
+										</div>
+									</div>
+								</li>
+
+								<li class="event" data-date="09/2024 - 10/2025">
+									<div class="row">
+										<div class="col-md-2 col-sm-12 d-flex justify-content-center">
+											<i class="las la-code" style="font-size: 4rem; color: var(--base-light-color); line-height: 1;"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<div class="mb-3 d-flex align-items-center">
+												<h5>Lucky Software (TEX Logistics)</h5><span>|</span><span>Remote</span>
+											</div>
+											<p>Golang Backend Developer</p>
+											<ul>
+												<li>Architected high-load logistics API handling 10,000+ daily transactions with sub-200ms response times.</li>
+												<li>Built backends for TEX Logistics, Bazar Nokady e-commerce, and Gurlesh messaging app using Golang microservices.</li>
+												<li>Implemented WebSocket real-time tracking, Firebase push notifications (99.9% delivery), PostGIS geolocation reducing latency by 40%.</li>
+											</ul>
+											<a href="https://texexpress.pro/" target="_blank"><span class="me_see_project_link">- visit TEX Logistics</span></a>
+										</div>
+									</div>
+								</li>
+
+								<li class="event" data-date="07/2024">
+									<div class="row">
+										<div class="col-md-2 col-sm-12 d-flex justify-content-center">
+											<img loading="lazy" src="static/me_logos/American_Councils.webp" style="border-radius: 50rem;" alt="American Councils logo">
 										</div>
 										<div class="col-md-10 col-sm-12">
 											<div class="mb-3 d-flex align-items-center">
 												<h5>American Council on Education</h5><span>|</span><span>Contract</span>
 											</div>
-											<p>Maker Space Project Trainer
+											<p>Maker Space Project Trainer</p>
 											<ul>
-												<li>Educated and inspired students to explore STEM fields, including robotics, VR, 3D printing and science.</li>
-												<li>Provided teenagers with hands-on, creative learning experiences in STEM.</li>
-												<li>Fostered critical thinking, problem-solving, and collaboration skills through engaging activities.</li>
+												<li>Designed and led Makerspace BootCamp for 30+ students (ages 12-18) in robotics, VR, 3D printing, and Roblox scripting.</li>
+												<li>Fostered critical thinking, problem-solving, and collaboration skills through hands-on STEM activities.</li>
 											</ul>
-											</p>
 										</div>
 									</div>
 								</li>
-
-								
 
 								<li class="event" data-date="11/2022 - 03/2023">
 									<div class="row">
@@ -204,55 +229,52 @@
 										</div>
 										<div class="col-md-10 col-sm-12">
 											<div class="mb-3 d-flex align-items-center">
-												<h5>AI-Printable</h5><span>|</span><span>Freelance</span>
+												<h5>AI-Printable</h5><span>|</span><span>Freelance (USA Remote)</span>
 											</div>
-											<p>Software Engineer
+											<p>Software Engineer</p>
 											<ul>
-												<li>Implemented secure & robust RESTful e-commerce web APIs.</li>
-												<li>Integrated AI image generation service into the app.</li>
-												<li>Collaborated with the Front-end team, improved React/Redux data store & components lifecycle, reduced response time.</li>
+												<li>Implemented secure RESTful e-commerce APIs with OAuth 2.0 and role-based permissions.</li>
+												<li>Integrated AI image generation (OpenAI, Gemini) for custom print-on-demand designs.</li>
+												<li>Collaborated with React/Redux frontend team, optimized data flow and component lifecycle.</li>
 											</ul>
-											</p>
 											<a href="https://aiprintable.com" target="_blank"><span class="me_see_project_link">- visit the website</span></a>
 										</div>
 									</div>
 								</li>
 
-								<li class="event" data-date="06/2022-06/2024">
+								<li class="event" data-date="06/2022 - 06/2024">
 									<div class="row">
 										<div class="col-md-2 col-sm-12 d-flex justify-content-center">
 											<img style="height: 6rem;" loading="lazy" src="static/me_logos/navalschool.svg" alt="Naval school logo">
 										</div>
 										<div class="col-md-10 col-sm-12">
 											<div class="mb-3 d-flex align-items-center">
-												<h5>Naval school</h5><span>|</span><span>Military service</span>
+												<h5>Naval Cadet School</h5><span>|</span><span>Military service</span>
 											</div>
-											<p>Robotics & STEAM teacher</p>
+											<p>Robotics &amp; STEAM Teacher</p>
 											<ul>
-												<li>Educated middle school cadets in mechanics, electronics, and project development, fostering hands-on technical skills.</li>
-												<li>Built and guided multiple projects and robots to achieve success in competitions.</li>
-												<li>Created an inspiring space for innovation within a cadet school.</li>
+												<li>Developed LMS system increasing effective teaching by 4x. Mentored 15+ students in robotics and software development.</li>
+												<li>Led multiple teams to success in national robotics competitions, coordinated 3 Robo Fest events.</li>
+												<li>Created an inspiring innovation space within a cadet school.</li>
 											</ul>
 										</div>
 									</div>
 								</li>
 
-								<li class="event" data-date="08/2019 - 06/2022">
+								<li class="event" data-date="08/2019 - 12/2022">
 									<div class="row">
 										<div class="col-md-2 col-sm-12 d-flex justify-content-center">
-											<img loading="lazy" src="static/me_logos/saplogo_edit.webp" alt="Sap Chozgut logo">
+											<img loading="lazy" src="static/me_logos/saplogo_edit.webp" alt="Sap Cozgut logo">
 										</div>
 										<div class="col-md-10 col-sm-12">
 											<div class="mb-3 d-flex align-items-center">
-												<h5>Sap Chozgut</h5><span>|</span><span>Part time</span>
+												<h5>Sap Cozgut</h5><span>|</span><span>Full-time</span>
 											</div>
-											<p>Software Enineer | Teamlead</p>
+											<p>Software Engineering Team Lead</p>
 											<ul>
-												<li>Improved server security and optimized application performance by implementing advanced caching 
-													strategies and server-side rendering, resulting in a more secure and faster e-commerce application 
-													deployment at Sap Chozgut. </li>
-												<li>Designed and implemented an IoT-integrated smart parking system at Sap Chozgut, incorporating automated sensors and electronic devices for precise accounting calculations and 
-													streamlined parking management.</li>
+												<li>Led team of 10 engineers building scalable e-commerce APIs serving 5+ production marketplaces.</li>
+												<li>Architected billing system increasing revenue by 18%. Established Scrum and CI/CD pipelines.</li>
+												<li>Built RESTful APIs for IoT parking management, improved app performance by 40% via SSR and caching.</li>
 											</ul>
 											<a href="https://www.instagram.com/sapcozgut/" target="_blank"><span class="me_see_project_link">- see the project</span></a>
 										</div>
@@ -268,35 +290,29 @@
 											<div class="mb-3 d-flex align-items-center">
 												<h5>Oguz Han ETUT Innovations Lab</h5><span>|</span><span>Team member</span>
 											</div>
-											<p>Development of Smart Home automation
-												system in "16-njy Tapgyr" and "Gorjaw"
-											</p>
+											<p>Development of Smart Home automation system in "16-njy Tapgyr" and "Gorjaw"</p>
 											<ul>
 												<li>Wireless communication between Arduino, Esp8266, RPi</li>
-												<li>Building Surveillance, Light & Temperature control devices</li>
-												<li>Android & Web app API's Development</li>
+												<li>Building Surveillance, Light &amp; Temperature control devices</li>
+												<li>Android &amp; Web app API's Development</li>
 											</ul>
-
-											<a href="https://github.com/mikebionic/IoT-Switch" target="_blank"><span class="me_see_project_link">
-												- see the project</span></a>
+											<a href="https://github.com/mikebionic/IoT-Switch" target="_blank"><span class="me_see_project_link">- see the project</span></a>
 										</div>
 									</div>
 								</li>
 
-								<li class="event" data-date="2017-2022">
+								<li class="event" data-date="2017 - 2022">
 									<div class="row">
 										<div class="col-md-2 col-sm-12 d-flex justify-content-center">
 											<img loading="lazy" src="static/me_logos/oguzhanlogo.webp" alt="Oguz Han University logo">
 										</div>
 										<div class="col-md-10 col-sm-12">
 											<div class="mb-3 d-flex align-items-center">
-												<h5>Oguz Han Engineering and Technology University</h5><span>|</span><span>Bachelor's
-													degree</span>
+												<h5>Oguz Han Engineering and Technology University</h5><span>|</span><span>Bachelor's degree</span>
 											</div>
-											<p>Faculty: Automations and Electronics</p>
-											<p>Major: Electronics engineer</p>
-											<a href="https://etut.edu.tm"><span class="me_see_project_link">- go to official
-													webpage</span></a>
+											<p>Faculty: Automation and Cyberphysical Systems | GPA: 87/100</p>
+											<p>Studied under Japanese professors. Led Student STEM Lab, built production-grade Smart Home IoT system, PLC automation with Mitsubishi &amp; Siemens.</p>
+											<a href="https://etut.edu.tm"><span class="me_see_project_link">- go to official webpage</span></a>
 										</div>
 									</div>
 								</li>
@@ -313,12 +329,12 @@
 	<!-- End Basic Information Area -->
 
 
-	<div id="contact" class="case-study-area pt-70 pb-70 me_contact_info">
+	<div id="contact" class="case-study-area pt-70 pb-70 me_contact_info reveal">
 		<div class="row">
 			<div class="col-sm-12 col-md-6">
 
 				<div class="me_contact_item">
-					<a href="https://instagram.com/me.create" target="_blank">
+					<a href="https://instagram.com/@me.create" target="_blank">
 						<img loading="lazy" src="static/contact_icons/instagram_1.svg" alt="Instagram">
 						<span>me.create</span>
 					</a>
@@ -332,13 +348,19 @@
 				<div class="me_contact_item">
 					<a href="https://www.youtube.com/@inneovation" target="_blank">
 						<img loading="lazy" src="static/contact_icons/play_button.svg" alt="YouTube">
-						<span>innneovation</span>
+						<span>@inneovation</span>
 					</a>
 				</div>
 				<div class="me_contact_item">
-					<a href="https://t.me/mecreate" target="_blank">
+					<a href="https://medium.com/@mecreate" target="_blank">
+						<img loading="lazy" src="static/contact_icons/medium.svg" alt="Medium">
+						<span>Medium: @mecreate</span>
+					</a>
+				</div>
+				<div class="me_contact_item">
+					<a href="https://t.me/mikebionic" target="_blank">
 						<img loading="lazy" src="static/contact_icons/telegram_app.svg" alt="Telegram">
-						<span>mecreate</span>
+						<span>mikebionic</span>
 					</a>
 				</div>
 				<div class="me_contact_item">
@@ -356,27 +378,15 @@
 					</a>
 				</div>
 				<div class="me_contact_item">
-					<a href="https://www.linkedin.com/in/muhammed-jepbarov/" target="_blank">
+					<a href="https://www.linkedin.com/in/jepbarov/" target="_blank">
 						<img loading="lazy" src="static/contact_icons/linkedin.svg" alt="LinkedIn">
-						<span>in/muhammed-jepbarov</span>
+						<span>in/jepbarov</span>
 					</a>
 				</div>
 				<div class="me_contact_item">
-					<a href="https://join.skype.com/invite/ntgI8ZCOEpC7" target="_blank">
-						<img loading="lazy" src="static/contact_icons/skype.svg" alt="Skype">
-						<span>live:muhammedjepbarov</span>
-					</a>
-				</div>
-				<div class="me_contact_item">
-					<a href="mailto:muhammedjepbarov@gmail.com">
+					<a href="mailto:jepbarovme@gmail.com">
 						<img loading="lazy" src="static/contact_icons/envelope_2.svg" alt="Email">
-						<span>muhammedjepbarov@gmail.com</span>
-					</a>
-				</div>
-				<div class="me_contact_item">
-					<a>
-						<img loading="lazy" src="static/contact_icons/marker_2.svg" alt="Location">
-						<span>Ashgabat, Turkmenistan</span>
+						<span>jepbarovme@gmail.com</span>
 					</a>
 				</div>
 			</div>
@@ -389,7 +399,7 @@
 
 
 	<!-- Testimonials Silder Two Area -->
-	<div id="portfolio" class="clients-slider-two-area pt-70 pb-70">
+	<div id="portfolio" class="clients-slider-two-area pt-70 pb-70 reveal">
 		<div class="container me_projects_container">
 			<div class="section-title">
 				<span>Projects</span>
@@ -401,13 +411,15 @@
 				</p>
 			</div>
 
-			<div class="me_two_electronics_carousel clients-slider-two owl-carousel owl-theme">
+			<div class="swiper clients-slider-two-swiper">
+				<div class="swiper-wrapper">
 
+				<div class="swiper-slide">
 				<div class="me_two_electronic_proj_slider">
 
 					<img loading="lazy" src="static/projects/using/traffic_light_project20210503_114900.webp" alt="Image" />
 					<h3>Traffic Control, Security, and Smart City Integration App</h3>
-					<span>Nanoelectronics & IoT</span>
+					<span>Nanoelectronics &amp; IoT | 2nd Place - Sanly Chozgut 2021</span>
 					<ul>
 						<li><b>Technology Stack:</b> RaspberryPi, Python, OpenCV, Arduino</li>
 						<li><b>Achievement:</b> Awarded second place in the Digital Solution competition (Sanly Chozgut) - 2021
@@ -420,7 +432,9 @@
 							project</span></a>
 					<i class="las la-bolt clients-icon"></i>
 				</div>
+				</div>
 
+				<div class="swiper-slide">
 				<div class="me_two_electronic_proj_slider">
 					<img loading="lazy" src="static/projects/using/smart_home_v1.webp" alt="Image" />
 					<h3>Smart Home Prototype V1</h3>
@@ -433,7 +447,9 @@
 							project</span></a>
 					<i class="las la-bolt clients-icon"></i>
 				</div>
+				</div>
 
+				<div class="swiper-slide">
 				<div class="me_two_electronic_proj_slider">
 					<img loading="lazy" src="static/projects/using/magic_mirror_proj_20200501_143858.webp" alt="Image" />
 
@@ -453,7 +469,9 @@
 
 					<i class="las la-bolt clients-icon"></i>
 				</div>
+				</div>
 
+				<div class="swiper-slide">
 				<div class="me_two_electronic_proj_slider">
 					<img loading="lazy" src="static/projects/using/fingerprint.webp" alt="Image" />
 					<h3>Fingerprint & RFID based Entrance Access Logger</h3>
@@ -478,10 +496,10 @@
 							video</span></a>
 					<i class="las la-bolt clients-icon"></i>
 				</div>
+				</div>
 
-			</div>
-			<div class="client-shape">
-				<img loading="lazy" src="static/images/shape/shape27.png" alt="Image" />
+				</div>
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 	</div>
@@ -489,14 +507,15 @@
 
 
 	<!-- Powerful Area -->
-	<div class="powerful-area pt-70">
+	<div class="powerful-area pt-70 reveal">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<div class="section-title">
 						<h2>
-							Clearparking - Small and Microserviced IoT Parking Management System
+							Clearparking - Microserviced IoT Parking Management System
 						</h2>
+						<p style="color: #f6d665; font-weight: 600;">Award: 2nd Place - Sanly Chozgut 2021 &amp; 2022</p>
 					</div>
 					<a href="https://github.com/mikebionic/clearparking"><span class="me_see_project_link" style="color:white">-
 							see the project</span></a>
@@ -567,7 +586,7 @@
 
 
 	<!-- Clients Area -->
-	<div class="clients-area pt-70 pb-70">
+	<div class="clients-area pt-70 pb-70 reveal">
 		<div class="container-fluid">
 			<div class="section-title">
 				<span>Electronic projects</span>
@@ -579,8 +598,10 @@
 		</div>
 
 		<div class="container-fluid me_projects_container">
-			<div class="clients-slider owl-carousel owl-theme">
+			<div class="swiper clients-swiper">
+				<div class="swiper-wrapper">
 
+				<div class="swiper-slide">
 				<div class="clients-slider-item">
 					<div class="row align-items-center">
 						<div class="col-lg-5">
@@ -623,7 +644,9 @@
 						</div>
 					</div>
 				</div>
+				</div>
 
+				<div class="swiper-slide">
 				<div class="clients-slider-item">
 					<div class="row align-items-center">
 						<div class="col-lg-5">
@@ -651,7 +674,9 @@
 						</div>
 					</div>
 				</div>
+				</div>
 
+				<div class="swiper-slide">
 				<div class="clients-slider-item">
 					<div class="row align-items-center">
 						<div class="col-lg-5">
@@ -693,9 +718,11 @@
 						</div>
 					</div>
 				</div>
+				</div>
 
 
 
+				<div class="swiper-slide">
 				<div class="clients-slider-item">
 					<div class="row align-items-center">
 						<div class="col-lg-5">
@@ -720,14 +747,11 @@
 						</div>
 					</div>
 				</div>
+				</div>
 
 
 
-
-
-
-
-
+				<div class="swiper-slide">
 				<div class="clients-slider-item">
 					<div class="row align-items-center">
 						<div class="col-lg-5">
@@ -772,9 +796,11 @@
 						</div>
 					</div>
 				</div>
+				</div>
 
 
 
+				<div class="swiper-slide">
 				<div class="clients-slider-item">
 					<div class="row align-items-center">
 						<div class="col-lg-5">
@@ -801,12 +827,11 @@
 						</div>
 					</div>
 				</div>
+				</div>
 
-
-			</div>
-			<div class="claint-shape">
-				<img src="static/images/shape/shape9.png" class="shape-9" alt="Shape" />
-				<img src="static/images/shape/shape10.png" class="shape-10" alt="Shape" />
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
 			</div>
 		</div>
 	</div>
@@ -817,7 +842,7 @@
 
 
 	<!-- Easy Steps Area -->
-	<div id="steps" class="easy-step-area pt-70">
+	<div id="steps" class="easy-step-area pt-70 reveal">
 		<div class="container me_projects_container">
 			<div class="section-title">
 				<span>Smart Home IoT system</span>
@@ -833,10 +858,6 @@
 					<div class="easy-step-img">
 						<img loading="lazy" src="static/projects/using/Smart_house_oguzhan.webp" class="step-1 me_wide_img"
 							alt="Image" />
-						<div class="easy-step-shape">
-							<img loading="lazy" src="static/images/shape/shape1.png" class="shape-1" alt="Shape" />
-							<img loading="lazy" src="static/images/shape/shape21.png" class="shape-21" alt="Shape" />
-						</div>
 					</div>
 				</div>
 
@@ -983,32 +1004,35 @@
 
 
 			<div id="screenshots" class="screens-slider-area pt-70">
-				<div class="screens-slider owl-carousel owl-theme">
-					<div class="screen-slider-item">
+				<div class="swiper screens-swiper">
+					<div class="swiper-wrapper">
+					<div class="swiper-slide screen-slider-item">
 						<img loading="lazy" src="static/projects/smart_home_screens/smart_home_app_screens1.webp" alt="Image" />
 					</div>
 
-					<div class="screen-slider-item">
+					<div class="swiper-slide screen-slider-item">
 						<img loading="lazy" src="static/projects/smart_home_screens/smart_home_app_screens2.webp" alt="Image" />
 					</div>
-					<div class="screen-slider-item">
+					<div class="swiper-slide screen-slider-item">
 						<img loading="lazy" src="static/projects/smart_home_screens/smart_home_app_screens5.webp" alt="Image" />
 					</div>
-					<div class="screen-slider-item">
+					<div class="swiper-slide screen-slider-item">
 						<img loading="lazy" src="static/projects/smart_home_screens/smart_home_app_screens3.webp" alt="Image" />
 					</div>
-					<div class="screen-slider-item">
+					<div class="swiper-slide screen-slider-item">
 						<img loading="lazy" src="static/projects/smart_home_screens/smart_home_app_screens6.webp" alt="Image" />
 					</div>
-					<div class="screen-slider-item">
+					<div class="swiper-slide screen-slider-item">
 						<img loading="lazy" src="static/projects/smart_home_screens/smart_home_app_screens9.webp" alt="Image" />
 					</div>
-					<div class="screen-slider-item">
+					<div class="swiper-slide screen-slider-item">
 						<img loading="lazy" src="static/projects/smart_home_screens/smart_home_app_screens10.webp" alt="Image" />
 					</div>
-					<div class="screen-slider-item">
+					<div class="swiper-slide screen-slider-item">
 						<img loading="lazy" src="static/projects/smart_home_screens/smart_home_app_screens11.webp" alt="Image" />
 					</div>
+					</div>
+					<div class="swiper-pagination"></div>
 				</div>
 
 			</div>
@@ -1021,7 +1045,7 @@
 
 
 	<!-- Case Study Area -->
-	<div id="webmobile_projects" class="case-study-area pt-70 pb-70">
+	<div id="webmobile_projects" class="case-study-area pt-70 pb-70 reveal">
 		<div class="container me_projects_container">
 			<div class="section-title">
 				<span>Portfolio</span>
@@ -1033,379 +1057,351 @@
 					more.</p>
 			</div>
 
-			<div class="row" style="align-items: center;">
+			<div class="row">
+
+				<!-- CoopCinema — Oct 2025 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/hyzmat_hazynasy.webp" alt="Image" />
-
+						<img loading="lazy" src="static/projects/articles/room.webp" alt="CoopCinema">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Hyzmat Hazynasy</h3>
-										<p>
-											Sanly hyzmat we söwda agentligi
-
-											<!-- Ähli isleýän maglumatlary, Film, Aýdym-saz, Kitap, Audio-kitap, Taryh maglumatlary, Kompýuter we Smartfon Programmalary, Suratlary, Jogaplary, Täzelikleri siz biziň ulgamymyzda tapyp bilersiňiz
-
-Sanly agentler size täze çykan Mediýa maglumatlary we kino-täzelikleri iberip bilerler. Maglumatlar Mugt we Tölegli bolup bilerler.
-Tölegli usul bilen amala aşyryp bilersiňiz. Tapmak kyn maglumatlar aňsatlyk bilen ýüklenip bilner.
-Siziň maglumat tapmak ukybyňyz bar bolsa, siz biziň sanly agentimiz bolup bilersiňiz. Her Amala aşyrylan işiňiziň tölegine (ball) siziň gazanjyňyz bolar. Biz bilen habarlaşyň!
-Onlaýn söwdasyny halaýan adamlara, sanly agent arkaly amatly, ýokary hilli we gysga wagtda sanly maglumatlary internet çeşmelerden tapmaga üpjünçilik edýär.
-1. Ulgam ulanyjylara sanly maglumatlary tapmaga kömek işleri ýerine ýetirýär;
-2. Ulanyjy öz gözleýän sanly maglumaty (wideo, aýdym-saz, kitap, gollanma ...) barada maglumaty girizýär we sargaýar;
-3. Ulgamyň işgärleri sargydy kabul edip, onuň gözlegine başlaýar;
-4. Maglumat tapylandan soň, ulanyjyň e-poçtasyna we telefon belgisine hasabat berilýär;
-5. Käbir ýagdaýlarda, maglumatyň tapylmagy tölegli bolup bilýär we bahasy görkezilýär.
-6. Ulgam piratlyga garşy iş ýerine ýetirýär;
-7. Programma ulanyjylara täze kadr açyp hünärmenleri kabul edip bilýär;
-8. Ulanyjy töleg geçirip QR kody kabul edýär. Bu kody ulanyjy ulgama belli formasynda girizip öz sargydyny ýükleýär;
-9. Her sargydyň bahasyndan belli göterimi iş ýerine ýetiren hünärmene geçirilýär.
-Sanly maglumatlary amatly we gysga wagtda tapmak üçin niýetlenen android programma üpjünçiligi diňe bir ulanyjylary üçin maglumatlar bilen üpjün etmän, olara indiwidual QR kod arkaly aýratyn maglumat berip bilýär. -->
-
-										</p>
-										<a href="https://mikebionic.github.io/hyzmat-ui/">
-											<i class="las la-code bg-3"></i>
-											<p>- see the project</p>
-										</a>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>CoopCinema</h3>
+								<p>Real-time synchronized video player for watching local files together across different computers.</p>
+								<span class="me_project_date">Oct 2025</span>
+								<a href="https://github.com/mikebionic/coopcinema"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
-
+				<!-- Webchestra — Oct 2025 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/gassap.webp" alt="Image" />
+						<img loading="lazy" src="static/projects/articles/webchestra.webp" alt="Webchestra">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Gassap</h3>
-										<p>
-											Domestic animals and plants e-commerce platform UI inspiration
-										</p>
-										<a href="https://mikebionic.github.io/gassap-ui/">
-											<i class="las la-code bg-3"></i>
-											<p>- see the project</p>
-										</a>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Webchestra</h3>
+								<p>Browser-based beat maker and musical instrument built with vanilla JS and Web Audio API.</p>
+								<span class="me_project_date">Oct 2025</span>
+								<a href="https://mikebionic.github.io/webchestra/"><i class="las la-code bg-3"></i><p>- try it live</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
+				<!-- Tradelane — Apr 2025 -->
 				<div class="col-lg-3 col-sm-6">
-					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/me_news_app.webp" alt="Image" />
+					<div class="case-study-card" style="background: linear-gradient(135deg, #0d2137, #1a3a5c); border-radius: 10px; min-height: 200px; display: flex; align-items: center; justify-content: center;">
+						<div style="text-align: center; padding: 20px;">
+							<i class="las la-exchange-alt" style="font-size: 60px; color: #f6d665;"></i>
+							<h3 style="color: #fff; margin-top: 10px;">Tradelane</h3>
+							<p style="color: #ccc;">Apr 2025</p>
+						</div>
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>ME-News Scraper</h3>
-										<p>
-											A smart webscraping bot with UI website, collecting all useful data from local News Agency
-											websites and bringing them to a single view.
-										</p>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Tradelane</h3>
+								<p>Hybrid marketplace &amp; on-demand delivery with dynamic pricing, multi-vendor coordination, real-time tracking.</p>
+								<span class="me_project_date">Apr 2025</span>
+								<a href="https://github.com/mikebionic/tradelane-go"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
+				<!-- Storegram — Nov 2024 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/quizzapp.webp" alt="Image" />
+						<img loading="lazy" src="static/projects/articles/storegram.webp" alt="Storegram">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Quiz app</h3>
-										<p>
-											Massive and secure Quizzer
-										</p>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Storegram</h3>
+								<p>Social media-like e-commerce backend: creators, sellers, buyers with messaging and video calling.</p>
+								<span class="me_project_date">Nov 2024</span>
+								<a href="https://github.com/mikebionic/storegram"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
+				<!-- Country-API — Nov 2024 -->
 				<div class="col-lg-3 col-sm-6">
-					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/sagmen_hekimbot.webp" alt="Image" />
+					<div class="case-study-card" style="background: linear-gradient(135deg, #0d1a2e, #1a2e4a); border-radius: 10px; min-height: 200px; display: flex; align-items: center; justify-content: center;">
+						<div style="text-align: center; padding: 20px;">
+							<i class="las la-globe" style="font-size: 60px; color: #0f8e9c;"></i>
+							<h3 style="color: #fff; margin-top: 10px;">Country-API</h3>
+							<p style="color: #ccc;">Nov 2024</p>
+						</div>
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Sagmen + Hekimbot</h3>
-										<p>
-											A medical registration and drug store project with an online checkup registry module which is
-											connected with IoT Doctor Assistant
-										</p>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Country-API</h3>
+								<p>Open-source localization service. Deployed on 5+ servers, integrated with 10+ apps.</p>
+								<span class="me_project_date">Nov 2024</span>
+								<a href="https://github.com/mikebionic/country-api"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
-
+				<!-- Viewscount — Nov 2024 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/sargyt.webp" alt="Image" />
+						<img loading="lazy" src="static/projects/articles/viewscount.webp" alt="Viewscount">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Sargyt</h3>
-										<p>
-											Ordered product's path tracking service with Arduino IoT device connected to a Global tracking
-											service.
-										</p>
-										<a href="https://github.com/mikebionic/OrderTracker_IoT/">
-											<i class="las la-code bg-3"></i>
-											<p>- see the project</p>
-										</a>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Viewscount Library</h3>
+								<p>Configurable Go library for organic view tracking. Works as middleware in Gin, Chi, or net/http.</p>
+								<span class="me_project_date">Nov 2024</span>
+								<a href="https://github.com/mikebionic/viewscount"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
+				<!-- TEX Logistics — Sep 2024 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/hunarmen.webp" alt="Image" />
+						<img loading="lazy" src="static/projects/articles/tex-info.webp" alt="TEX Logistics">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Hunarmen</h3>
-										<p>
-											<i class="las la-play-circle bg-3"></i>
-											<i class="las la-code bg-3"></i>
-											<i class="las la-plus bg-3"></i>
-											Hünärmen – ýörite döwrebap kadr agentligi.
-										</p>
-										<a href="https://mikebionic.github.io/hunarmen-ui/">
-											<i class="las la-code bg-3"></i>
-											<p>- see the project</p>
-										</a>
-										<!-- BIZ KÄRHANALARY WE HÜNÄRMENLERI BIRIKDIRÝÄRIS
-Kärhanalaryň we hünärmenleriň arasyndaky çäkleri azaltýarys. Biz iş berijilere we işgärlere gönümel gatnaşygy üpjün berýäris.
-Biziň Programmamyzyň kömegi bilen kärhanalar özüne gerekli we bilimli hünärmenleri tapyp bilerler. Hünärmenler bolsa öz ukybyna gabat gelýän we isleýän kärini tapyp işläp bilerler.
-Häzirki wagtda islendik ýurduň esasy wezipesi öz raýatlaryny iş bilen üpjün edilmegi bolup durýar. Bu taslama ulanyjylara diňe bir çalt iş tapdyrmana mümkinçilik bermän, eýsem haýsy wezipede işläp biljekdigini testyň üsti bilen kömek edýär.
-Kärhana öz nyşanyny programma ýüklemek arkaly mahabat işini ýerine ýetirýär.
-Hünärmen gerek mahalynda kärhana aýratyn testiň kömegi bilen özüne gerekli kadry saýlap bilýär.
-Android platformasynyň esasynda düzülen programma üpjünçiligi
-android telefonlara ýüklenýär.
-Kärhanalar üçin amatly we ýokary hilli onlaýn agentligi;
-Hünärmenleri hasaba alyp, özleriniň proforiýentasiýa testleri we kärhanalaryň aýratyn düzen sowalnamalaryny geçmek mümkinçiligi;
-Kärhanalararyň sowalnamalaryny üstünlikli geçen hünärmenleri gerekli kadrlaryň gepleşik tapgyryna paýlamaklyga kömek;
-Kärhanalara wajyp we çalt ýagdaýda gerek bolan kadr gözleg reklamasy;
-Hünärmenleri kärhanalar bilen baglanşdyrmak bilen, işe girmek üçin ýeňil we meselesiz gatnaşygyny döretmek mümkinçiligi bermek;
-Hünarmen gözleýän agentliklerine ulanmaga we ýeňil android programma üpjünçiligi diňe bir gysga wagtda kadr tapyp bermän, eýsem özüniň haýsy pudaga degişlidini bilmeýän ulanyjylara test arkaly öz wezipesini görkezýär. -->
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>TEX Logistics</h3>
+								<p>High-load logistics platform: 10K+ daily transactions, sub-200ms, real-time tracking, Firebase push notifications.</p>
+								<span class="me_project_date">Sep 2024</span>
+								<a href="https://texexpress.pro/"><i class="las la-code bg-3"></i><p>- visit website</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
-
+				<!-- Hyzmat Hazynasy — Apr 2024 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/ERDU.webp" alt="Image" />
+						<img loading="lazy" src="static/projects/web_proj/hyzmat_hazynasy.webp" alt="Hyzmat Hazynasy">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>ERDU</h3>
-										<p>
-											ERDU - Flexible FTP and HTTP connected Cloud app written on Python Flask
-										</p>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Hyzmat Hazynasy</h3>
+								<p>Sanly hyzmat we söwda agentligi</p>
+								<span class="me_project_date">Apr 2024</span>
+								<a href="https://mikebionic.github.io/hyzmat-ui/"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
-
+				<!-- Gassap — Mar 2024 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/devfest2021_ui.webp" alt="Image" />
+						<img loading="lazy" src="static/projects/web_proj/gassap.webp" alt="Gassap">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>DevFest'21 Commercial Web page</h3>
-										<p>
-											DevFestis one of the biggest tech events for developers across the globe.
-										</p>
-										<a href="https://mikebionic.github.io/devfest21/">
-											<i class="las la-code bg-3"></i>
-											<p>- see the project</p>
-										</a>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Gassap</h3>
+								<p>Domestic animals and plants e-commerce platform UI inspiration</p>
+								<span class="me_project_date">Mar 2024</span>
+								<a href="https://mikebionic.github.io/gassap-ui/"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
-
+				<!-- Hunarmen — Mar 2023 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/lms_oguz.webp" alt="Image" />
+						<img loading="lazy" src="static/projects/web_proj/hunarmen.webp" alt="Hunarmen">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>LMS</h3>
-										<p>
-											System for managing lectures, hometasks and grading system in University.
-										</p>
-										<a href="https://github.com/mikebionic/LMS-Oguz/">
-											<i class="las la-code bg-3"></i>
-											<p>- see the project</p>
-										</a>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Hunarmen</h3>
+								<p>Hünärmen – ýörite döwrebap kadr agentligi.</p>
+								<span class="me_project_date">Mar 2023</span>
+								<a href="https://mikebionic.github.io/hunarmen-ui/"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
+				<!-- Tapla — Mar 2023 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/lomaysowda_v2.webp" alt="Image" />
-
+						<img loading="lazy" src="static/projects/web_proj/Tapla.webp" alt="Tapla">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Lomay Sowda v2</h3>
-										<p>
-											A wholesale trading platform written on React.js, Python.
-										</p>
-										<a href="https://ls.com.tm">
-											<i class="las la-code bg-3"></i>
-											<p>- go to website</p>
-										</a>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Tapla</h3>
+								<p>Health &amp; Fitness related UI inspiration</p>
+								<span class="me_project_date">Mar 2023</span>
+								<a href="https://mikebionic.github.io/tapla-ui/"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
-
-
+				<!-- DevFest'21 — Oct 2021 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/Online tagta1.webp" alt="Image" />
-						<div>
-							<div class="popup-video">
-								<div class="video-btn me_centered_video_btn video-btn-1">
-									<a class="popup-youtube" href="https://www.youtube.com/watch?v=diqDiTV6t7o">
-										<i class="las la-play"></i>
-										<span class="ripple pinkBg"></span>
-										<span class="ripple pinkBg"></span>
-										<span class="ripple pinkBg"></span>
-									</a>
-								</div>
-							</div>
-						</div>
-
+						<img loading="lazy" src="static/projects/web_proj/devfest2021_ui.webp" alt="DevFest 2021">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Whiteboard online sharing</h3>
-										<p>
-											An OpenCV driven project for sharing a Whiteboard on lecture from any angle and streaming it to a
-											website
-										</p>
-										<a href="https://github.com/mikebionic/online_board/">
-											<i class="las la-code bg-3"></i>
-											<p>- see the project</p>
-										</a>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>DevFest'21 Commercial Web page</h3>
+								<p>DevFest is one of the biggest tech events for developers across the globe.</p>
+								<span class="me_project_date">Oct 2021</span>
+								<a href="https://mikebionic.github.io/devfest21/"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
+				<!-- DB-Gateway-Go — Jul 2021 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/Tapla.webp" alt="Image" />
+						<img loading="lazy" src="static/projects/articles/db-gateway.webp" alt="DB-Gateway-Go">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Tapla</h3>
-										<p>
-											Health & Fitness related UI inspiration
-											<!-- 		
-												Sport bilen meşhurlanýan raýatlara diňe bir öz bedeniniň haýsy görnüşine degişlidigini görkezmän, eýsem programma üpjünçiligi tarapyndan düzülen maşk we iýmit meýilnamasynyň kömegi bilen, öz saglygyna we bedenine has takyk seredip biljekdigine mümkinçilik berýär.
-												1. Adam bedeniň görnüşini saýlamak;
-												2. Saglyga peýdaly iýmit tertipleri we tälimçileriň maslahatlaryna görä gurnalan gündelik maşklary ulanyjylara amatly we hilli usulda ýetirmek;
-												3. Öz gün tertibiňizi düzüp bilmek;
-												4. Onlaýn arkaly tälimçiniň işini ýerine ýetirmek;
-												Häzirki wagtda sporta berilýän üns gün günden artýar, şonuň üçin dürli maksatly programma üpjünçilikler döredilýär. Tapla programma üpjünçiligi özüniň maşk we iýmit meýilnamasy bilen ulanyjylara dogry we takyk maglumatlary bilen üpjün edýär.
- -->
-										</p>
-										<a href="https://mikebionic.github.io/tapla-ui/">
-											<i class="las la-code bg-3"></i>
-											<p>- see the project</p>
-										</a>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>DB-Gateway-Go</h3>
+								<p>High-performance database gateway API. Deployed across 29 businesses, 150+ retail devices.</p>
+								<span class="me_project_date">Jul 2021</span>
+								<a href="https://github.com/mikebionic/db-gateway-go"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
 
+				<!-- Lomay Sowda v2 — 2021 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/lomaysowda_v1.webp" alt="Image" />
-
+						<img loading="lazy" src="static/projects/web_proj/lomaysowda_v2.webp" alt="Lomay Sowda v2">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Lomay Sowda v1</h3>
-										<p>
-											The first ever version of E-commerce platform
-										</p>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Lomay Sowda v2</h3>
+								<p>A wholesale trading platform written on React.js, Python.</p>
+								<span class="me_project_date">2021</span>
+								<a href="https://ls.com.tm"><i class="las la-code bg-3"></i><p>- go to website</p></a>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
+
+				<!-- Sargyt — 2021 -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="case-study-card">
-						<img loading="lazy" src="static/projects/web_proj/hilli_v1.webp" alt="Image" />
-
+						<img loading="lazy" src="static/projects/web_proj/sargyt.webp" alt="Sargyt">
 						<div class="caption">
-							<div class="d-table">
-								<div class="d-table-cell">
-									<div class="study-text">
-										<h3>Hilli v1</h3>
-										<p>
-											An electronic equipment e-commerce website
-										</p>
-									</div>
-								</div>
-							</div>
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Sargyt</h3>
+								<p>Ordered product's path tracking service with Arduino IoT device connected to a Global tracking service.</p>
+								<span class="me_project_date">2021</span>
+								<a href="https://github.com/mikebionic/OrderTracker_IoT/"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Whiteboard online sharing — 2020 -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="case-study-card">
+						<img loading="lazy" src="static/projects/web_proj/Online tagta1.webp" alt="Whiteboard online sharing">
+						<div class="caption">
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Whiteboard online sharing</h3>
+								<p>An OpenCV driven project for sharing a Whiteboard on lecture from any angle and streaming it to a website</p>
+								<span class="me_project_date">2020</span>
+								<a href="https://github.com/mikebionic/online_board/"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- LMS — May 2020 -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="case-study-card">
+						<img loading="lazy" src="static/projects/web_proj/lms_oguz.webp" alt="LMS">
+						<div class="caption">
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>LMS</h3>
+								<p>System for managing lectures, hometasks and grading system in University.</p>
+								<span class="me_project_date">May 2020</span>
+								<a href="https://github.com/mikebionic/LMS-Oguz/"><i class="las la-code bg-3"></i><p>- see the project</p></a>
+							</div></div></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sagmen + Hekimbot — 2020 -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="case-study-card">
+						<img loading="lazy" src="static/projects/web_proj/sagmen_hekimbot.webp" alt="Sagmen + Hekimbot">
+						<div class="caption">
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Sagmen + Hekimbot</h3>
+								<p>A medical registration and drug store project with an online checkup registry module connected with IoT Doctor Assistant</p>
+								<span class="me_project_date">2020</span>
+							</div></div></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ME-News Scraper — 2020 -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="case-study-card">
+						<img loading="lazy" src="static/projects/web_proj/me_news_app.webp" alt="ME-News Scraper">
+						<div class="caption">
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>ME-News Scraper</h3>
+								<p>A smart webscraping bot with UI, collecting data from local News Agency websites into a single view.</p>
+								<span class="me_project_date">2020</span>
+							</div></div></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Quiz app — 2020 -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="case-study-card">
+						<img loading="lazy" src="static/projects/web_proj/quizzapp.webp" alt="Quiz app">
+						<div class="caption">
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Quiz app</h3>
+								<p>Massive and secure Quizzer</p>
+								<span class="me_project_date">2020</span>
+							</div></div></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ERDU — 2020 -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="case-study-card">
+						<img loading="lazy" src="static/projects/web_proj/ERDU.webp" alt="ERDU">
+						<div class="caption">
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>ERDU</h3>
+								<p>ERDU - Flexible FTP and HTTP connected Cloud app written on Python Flask</p>
+								<span class="me_project_date">2020</span>
+							</div></div></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Lomay Sowda v1 — 2019 -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="case-study-card">
+						<img loading="lazy" src="static/projects/web_proj/lomaysowda_v1.webp" alt="Lomay Sowda v1">
+						<div class="caption">
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Lomay Sowda v1</h3>
+								<p>The first ever version of E-commerce platform</p>
+								<span class="me_project_date">2019</span>
+							</div></div></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Hilli v1 — 2019 -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="case-study-card">
+						<img loading="lazy" src="static/projects/web_proj/hilli_v1.webp" alt="Hilli v1">
+						<div class="caption">
+							<div class="d-table"><div class="d-table-cell"><div class="study-text">
+								<h3>Hilli v1</h3>
+								<p>An electronic equipment e-commerce website</p>
+								<span class="me_project_date">2019</span>
+							</div></div></div>
 						</div>
 					</div>
 				</div>
@@ -1422,7 +1418,7 @@ Hünarmen gözleýän agentliklerine ulanmaga we ýeňil android programma üpj�
 
 
 	<!-- Screens Slider Area -->
-	<div id="robotics_club" class="screens-slider-area pt-70 pb-70">
+	<div id="robotics_club" class="screens-slider-area pt-70 pb-70 reveal">
 		<div class="container me_projects_container">
 			<div class="section-title">
 				<span>Naval School Robotics Club</span>
@@ -1442,27 +1438,29 @@ Hünarmen gözleýän agentliklerine ulanmaga we ýeňil android programma üpj�
 				</div>
 			</div>
 
-			<div class="screens-slider owl-carousel owl-theme">
-				<div class="screen-slider-item">
+			<div class="swiper screens-swiper-2">
+				<div class="swiper-wrapper">
+				<div class="swiper-slide screen-slider-item">
 					<img loading="lazy" src="static/projects/robofest/cars.webp" alt="cars">
 				</div>
-				<div class="screen-slider-item">
+				<div class="swiper-slide screen-slider-item">
 					<img loading="lazy" src="static/projects/robofest/maze_solver.webp" alt="maze_solver">
 				</div>
-				<div class="screen-slider-item">
+				<div class="swiper-slide screen-slider-item">
 					<img loading="lazy" src="static/projects/robofest/linefollower.webp" alt="linefollower">
 				</div>
-				<div class="screen-slider-item">
+				<div class="swiper-slide screen-slider-item">
 					<img loading="lazy" src="static/projects/robofest/naval_robotics_robots dalije.webp"
 						alt="naval_robotics_robots">
 				</div>
-				<div class="screen-slider-item">
+				<div class="swiper-slide screen-slider-item">
 					<img loading="lazy" src="static/projects/robofest/robotics_naval_yot13.webp" alt="robotics_naval_yot13">
 				</div>
-				<div class="screen-slider-item">
+				<div class="swiper-slide screen-slider-item">
 					<img loading="lazy" src="static/projects/robofest/linefollowBot.webp" alt="linefollowBot.webp">
 				</div>
-
+				</div>
+				<div class="swiper-pagination"></div>
 			</div>
 
 		</div>
@@ -1476,7 +1474,7 @@ Hünarmen gözleýän agentliklerine ulanmaga we ýeňil android programma üpj�
 
 
 	<!-- Our Services Area -->
-	<div id="volunteering" class="our-services-area service-shape pt-70 pb-70">
+	<div id="volunteering" class="our-services-area service-shape pt-70 pb-70 reveal">
 		<div class="container">
 			<div class="section-title">
 				<h2 class="highlighted_text">Volunteering</h2>
@@ -1486,25 +1484,49 @@ Hünarmen gözleýän agentliklerine ulanmaga we ýeňil android programma üpj�
 
 				<div class="col-lg-4 col-sm-6">
 					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/volunteering/gdgashgabat.webp" alt="GDG Ashgabat">
+						<h3>GDG Ashgabat Co-organizer</h3>
+						<p>Since Oct 2025 - Organizer focused on technical &amp; communications aspects</p>
+						<p class="highlighted_text">Speaker &amp; Mentor since 2019</p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/volunteering/devfest23_speech.webp" alt="DevFest 2025">
+						<h3>Speaker &amp; Co-organizer, DevFest'25</h3>
+						<p>CI/CD Pipelines &amp; Cloud Deployments for Go</p>
+						<p class="highlighted_text">Impact: ~690 attendees</p>
+						<br><a class="popup-youtube" href="https://youtu.be/yfzkSp3TlT4"><span class="me_see_project_link">- watch the video</span></a>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/volunteering/devfest23_speech.webp" alt="Google I/O Extended 2025">
+						<h3>Speaker, Google I/O Extended '25</h3>
+						<p>Firebase Cloud Messaging workshop with Golang</p>
+						<p class="highlighted_text">Impact: 199 attendees</p>
+						<br><a class="popup-youtube" href="https://www.youtube.com/watch?v=yvOwIc9TMJE"><span class="me_see_project_link">- watch the video</span></a>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
 						<img loading="lazy" src="static/projects/volunteering/space_apps.webp" alt="NASA Space Apps Challenge">
 						<h3>IT Specialist, Mentor</h3>
-						<p>
-							Nasa Space Apps Challenge
-						</p>
-						<br><a class="popup-youtube" href="https://www.youtube.com/watch?v=PkehE4ZffyA"><span
-							class="me_see_project_link">- watch the
-							video</span></a>
+						<p>NASA Space Apps Challenge 2024</p>
+						<p class="highlighted_text">168 participants mentored</p>
+						<br><a class="popup-youtube" href="https://www.youtube.com/watch?v=PkehE4ZffyA"><span class="me_see_project_link">- watch the video</span></a>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-sm-6">
 					<div class="our-service-card">
 						<img loading="lazy" src="static/projects/volunteering/hackaton_ashgabat_gdg.webp" alt="Hackaton Ashgabat">
-						<h3>1'st place in 1'st ever Hackaton Ashgabat</h3>
-						<p>
-							The first ever Hackaton 2020 assosiated by Google Developers Group Ashgabat.
-						</p>
-						<p class="highlighted_text">Team name: "VooDoo boys"</p>
+						<h3>1st place - 1st ever Hackathon Ashgabat</h3>
+						<p>GDG Ashgabat, Jul 2021</p>
+						<p class="highlighted_text">Team: "VooDoo boys" | 1,826 total reach</p>
 					</div>
 				</div>
 
@@ -1512,41 +1534,65 @@ Hünarmen gözleýän agentliklerine ulanmaga we ýeňil android programma üpj�
 					<div class="our-service-card">
 						<img loading="lazy" src="static/projects/volunteering/devfest_gdg.webp" alt="DevFest 2021">
 						<h3>Speaker on DevFest'21</h3>
-						<p>
-							Google Developers Group Ashgabat
-						</p>
-						<p class="highlighted_text">Daily hacks with IoT</p>
+						<p>GDG Ashgabat - Daily hacks with IoT</p>
+						<p class="highlighted_text">54 offline + 434 online</p>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-sm-6">
 					<div class="our-service-card">
 						<img loading="lazy" src="static/projects/volunteering/devfest23_speech.webp" alt="DevFest 2023">
-						<h3>Speaker on Devfest'23</h3>
-						<p>
-							Google Developers Group Ashgabat
-						</p>
-						<p class="highlighted_text">Arduino + Golang in projects of IoT</p>
-
-						<br><a class="popup-youtube" href="https://www.youtube.com/watch?v=CCq62woAmhk"
-							><span class="me_see_project_link">- watch the
-								video</span></a>
-						</div>
+						<h3>Speaker on DevFest'23</h3>
+						<p>Arduino + Golang in projects of IoT</p>
+						<p class="highlighted_text">568 reach (247 views)</p>
+						<br><a class="popup-youtube" href="https://www.youtube.com/watch?v=CCq62woAmhk"><span class="me_see_project_link">- watch the video</span></a>
+					</div>
 				</div>
 
 				<div class="col-lg-4 col-sm-6">
 					<div class="our-service-card">
 						<img loading="lazy" src="static/projects/volunteering/gdg_wtm_presentation.webp" alt="WTM 2022">
-						<h3>Speaker on WTM'22</h3>
-						<p>
-							Google Developers Group Ashgabat
-						</p>
-						<p class="highlighted_text">Lifehacks in development with and witout Google</p>
+						<h3>Speaker on WTM'22 (IWD)</h3>
+						<p>Lifehacks in development with and without Google</p>
+						<p class="highlighted_text">149 reach</p>
+						<br><a class="popup-youtube" href="https://www.youtube.com/watch?v=gAgpLRe91Bg"><span class="me_see_project_link">- watch the video</span></a>
+					</div>
+				</div>
 
-						<br><a class="popup-youtube" href="https://www.youtube.com/watch?v=gAgpLRe91Bg"><span
-								class="me_see_project_link">- watch the
-								video</span></a>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/volunteering/gdg_wtm_presentation.webp" alt="Smart Teams session">
+						<h3>Smart Teams: Top Results Through Teamwork</h3>
+						<p>Young Professionals Network, Jul 2025</p>
+						<p class="highlighted_text">162 attendees</p>
+						<br><a class="popup-youtube" href="https://www.youtube.com/watch?v=TiskNV8pt6M"><span class="me_see_project_link">- watch the video</span></a>
+					</div>
+				</div>
 
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/volunteering/gdg_wtm_presentation.webp" alt="Tech Solutions talk">
+						<h3>Deploying Tech Solutions for Business</h3>
+						<p>Business &amp; Entrepreneurship University, Nov 2025</p>
+						<p class="highlighted_text">500 students reached</p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/volunteering/hackaton_ashgabat_gdg.webp" alt="Hackathon mentoring">
+						<h3>Mentor at Ashgabat Hackathon #2</h3>
+						<p>GDG Ashgabat, Aug 2021</p>
+						<p class="highlighted_text">146 offline + 132 online</p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/volunteering/devfest_gdg.webp" alt="IoT deployment presentation">
+						<h3>IoT Systems Deployment in Turkmenistan</h3>
+						<p>Scientific conference, Nov 2020</p>
+						<p class="highlighted_text">809 offline + 233 online</p>
 					</div>
 				</div>
 
@@ -1554,29 +1600,8 @@ Hünarmen gözleýän agentliklerine ulanmaga we ýeňil android programma üpj�
 					<div class="our-service-card">
 						<img loading="lazy" src="static/projects/volunteering/technovation_21.webp" alt="Technovation Girls">
 						<h3>Mentor, Club Ambassador</h3>
-						<p>
-							Technovation Girls Turkmenistan
-						</p>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-6">
-					<div class="our-service-card">
-						<img loading="lazy" src="static/projects/volunteering/technovation_defi.webp" alt="Technovation Defi team">
-						<h3>Mentor of Defi</h3>
-						<p>
-							Technovation Girls Turkmenistan 2021
-						</p>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-6">
-					<div class="our-service-card">
-						<img loading="lazy" src="static/projects/volunteering/defi_mentoring.webp" alt="Defi mentoring session">
-						<h3>Defi team mentoring session</h3>
-						<p>
-							Technovation Girls Turkmenistan 2021
-						</p>
+						<p>Technovation Girls Turkmenistan (2021-2024)</p>
+						<p class="highlighted_text">Mentored 9+ teams across several seasons</p>
 					</div>
 				</div>
 
@@ -1584,44 +1609,121 @@ Hünarmen gözleýän agentliklerine ulanmaga we ýeňil android programma üpj�
 					<div class="our-service-card">
 						<img loading="lazy" src="static/projects/volunteering/utopia_mentoring.webp" alt="Utopia mentoring">
 						<h3>Mentor of Utopia</h3>
-						<p>
-							Technovation Girls Turkmenistan 2023
-						</p>
+						<p>Technovation Girls Turkmenistan 2023</p>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-sm-6">
 					<div class="our-service-card">
 						<img loading="lazy" src="static/projects/volunteering/line_follower_robofest.webp" alt="Robotics line follower">
-						<h3>Robotics teacher in Naval school</h3>
-						<p>
-							Children got acquainted with the field of robotics and took part in Robo-Fests
-						</p>
+						<h3>Robotics Teacher - Naval School</h3>
+						<p>Led robotics club, guided multiple projects to success in Robo-Fests (2022-2024)</p>
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-sm-6">
-					<div class="our-service-card">
-						<img loading="lazy" src="static/projects/volunteering/gdgashgabat.webp" alt="GDG Ashgabat">
-						<h3>Mentor & Speaker</h3>
-						<p>
-							Google Developers Group Ashgabat
-						</p>
-					</div>
-				</div>
-				
-
-
-			</div>
-			<div class="our-service-shape">
-				<img loading="lazy" src="static/images/shape/shape26.png" alt="Shape" />
 			</div>
 		</div>
 	</div>
 
 
+	<!-- Medium Articles Area -->
+	<div id="articles" class="case-study-area pt-70 pb-70 reveal">
+		<div class="container me_projects_container">
+			<div class="section-title">
+				<span>20+ Technical Articles</span>
+				<h2>Medium Articles</h2>
+				<p>Writing about Go, DevOps, Cloud, IoT, and software engineering best practices.</p>
+				<a href="https://medium.com/@mecreate" target="_blank"><span class="me_see_project_link">- view all on Medium</span></a>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/coopcinema.webp" alt="Co-op Cinema" class="me_article_img">
+						<h3>I Built a Synchronized Video Player in a Weekend</h3>
+						<p>Jan 2026</p>
+						<a href="https://medium.com/@mecreate/i-built-a-synchronized-video-player-in-a-weekend-because-watch-parties-shouldnt-be-this-hard-2a0339a163c1" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/kubernetes-cheatsheet.webp" alt="Kubernetes Crash Course" class="me_article_img">
+						<h3>Kubernetes Crash Course: Your Essential Cheatsheet</h3>
+						<p>Dec 2025</p>
+						<a href="https://medium.com/@mecreate/kubernetes-crash-course-your-essential-cheatsheet-c1698b67c606" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/postgresql-devops.webp" alt="PostgreSQL for DevOps" class="me_article_img">
+						<h3>PostgreSQL for DevOps: Production Setup and Operations</h3>
+						<p>Nov 2025</p>
+						<a href="https://medium.com/@mecreate/postgresql-for-devops-production-setup-and-operations-2630f41ce779" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/prometheus.webp" alt="Prometheus from Zero" class="me_article_img">
+						<h3>Prometheus from Zero: Metrics Collection and Alerting</h3>
+						<p>Nov 2025</p>
+						<a href="https://medium.com/@mecreate/prometheus-from-zero-metrics-collection-and-alerting-15feb15031b1" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/github-pipelines-go.webp" alt="GitHub Pipelines for Go" class="me_article_img">
+						<h3>Code. Build. Deploy. Repeat. GitHub Pipelines for Go</h3>
+						<p>Nov 2025</p>
+						<a href="https://medium.com/@mecreate/code-build-deploy-repeat-github-pipelines-cloud-deployments-for-go-143e26273824" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/kubernetes-beginners.webp" alt="Kubernetes for Beginners" class="me_article_img">
+						<h3>Kubernetes for Beginners: Architecture and Core Concepts</h3>
+						<p>Nov 2025</p>
+						<a href="https://medium.com/@mecreate/kubernetes-for-beginners-architecture-and-core-concepts-af56cafec316" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/docker-registry.webp" alt="Docker Registry" class="me_article_img">
+						<h3>Deploying Your Own Docker Registry (with NGINX)</h3>
+						<p>Jul 2025</p>
+						<a href="https://medium.com/@mecreate/deploying-your-own-docker-registry-with-nginx-6ddc4dc41ca0" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/grpc-arduino-gcloud.webp" alt="gRPC Arduino on Google Cloud" class="me_article_img">
+						<h3>Deploying a Golang gRPC App for Arduino on Google Cloud</h3>
+						<p>Apr 2025</p>
+						<a href="https://medium.com/@mecreate/deploying-a-golang-grpc-app-for-arduino-uno-lights-control-on-google-cloud-2d0eb12ab946" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/kafka-go.webp" alt="Apache Kafka and Go" class="me_article_img">
+						<h3>Building Real-Time Applications with Apache Kafka and Go</h3>
+						<p>Feb 2025</p>
+						<a href="https://medium.com/@mecreate/building-real-time-applications-with-apache-kafka-and-go-22df30fb9a32" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="our-service-card">
+						<img loading="lazy" src="static/projects/articles/dockerizing-go.webp" alt="Dockerizing Go" class="me_article_img">
+						<h3>Dockerizing a Go Application: A Complete Guide</h3>
+						<p>Feb 2025</p>
+						<a href="https://medium.com/@mecreate/dockerizing-a-go-application-a-complete-guide-with-best-practices-5648d4eb362c" target="_blank"><span class="me_see_project_link">- read article</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Medium Articles Area -->
+
 	<!-- Why Choose Us Area -->
-	<div class="why-choose-area pt-100 pb-70">
+	<div class="why-choose-area pt-100 pb-70 reveal">
 		<div class="container me_projects_container">
 			<div class="section-title">
 				<h2 class="highlighted_text">Other Projects</h2>
@@ -1769,24 +1871,17 @@ Hünarmen gözleýän agentliklerine ulanmaga we ýeňil android programma üpj�
 	</main>
 	<footer>
 	<!-- Go Top -->
-	<div class="go-top">
+	<div class="go-top" role="button" tabindex="0" aria-label="Back to top">
 		<i class="las la-angle-double-up"></i>
 	</div>
 	<!-- End Go Top -->
 	</footer>
 
 	<script src="static/js/jquery.min.js"></script>
-	<script src="static/js/popper.min.js"></script>
-	<script src="static/js/bootstrap.min.js"></script>
-	<!-- Owl carousel JS -->
-	<script src="static/js/owl.carousel.min.js"></script>
-	<!-- Magnific JS -->
+	<script src="static/js/bootstrap.bundle.min.js"></script>
+	<script src="static/js/swiper-bundle.min.js"></script>
 	<script src="static/js/jquery.magnific-popup.min.js"></script>
-	<!-- Wow JS -->
-	<script src="static/js/wow.min.js"></script>
-	<!-- Custom JS -->
 	<script src="static/js/custom.js"></script>
-	<script type="text/javascript" src="static/js/mdb.min.js"></script>
 
 
 </body>
