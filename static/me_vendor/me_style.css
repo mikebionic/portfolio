@@ -66,7 +66,7 @@
 .me_contact_item a * {
 	margin: 0.5rem;
 	font-weight: 700;
-	font-size: small;
+	font-size: 1rem;
 	color: var(--base-nav-color);
 }
 
@@ -77,23 +77,27 @@
 .me_see_project_link {
 	font-size: 20px !important;
 	font-weight: 500 !important;
-	color: var(--base-light-color);
+	color: var(--base-light-color) !important;
 	display: inline-block;
 	margin-bottom: 15px;
 	line-height: 1;
 }
+a:hover .me_see_project_link,
 .me_see_project_link:hover {
-	color: var(--base-nav-color);
+	color: var(--yellow-accent-color) !important;
 }
 
 .me_contact_info {
 	padding-right: 1rem;
 	padding-left: 1rem;
+	background-color: #edf7f8;
 }
 
 .me_contact_info .row {
 	align-items: center;
-	padding-left: 10%;
+	justify-content: center;
+	max-width: 900px;
+	margin: 0 auto;
 }
 
 .me_wide_img {
@@ -110,6 +114,24 @@
 	position: relative;
 	z-index: 5;
 	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.clients-slider-two-swiper .swiper-slide {
+	height: auto;
+}
+
+.clients-slider-two-swiper .me_two_electronic_proj_slider {
+	max-width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.clients-slider-two-swiper .me_two_electronic_proj_slider img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
 }
 
 .me_two_electronic_proj_slider img {
@@ -288,7 +310,6 @@ h5 {
 	border-radius: 8px;
 	margin-bottom: 15px;
 	object-fit: cover;
-	max-height: 200px;
 }
 
 .me_project_date {
@@ -309,6 +330,7 @@ h5 {
 }
 
 .case-study-area .col-lg-3,
+.case-study-area .col-lg-4,
 .case-study-area .col-sm-6 {
 	margin-bottom: 30px;
 	display: flex;
@@ -318,6 +340,7 @@ h5 {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 }
 
 .our-service-card h3 {
@@ -325,6 +348,299 @@ h5 {
 }
 
 .our-service-card .me_article_img {
-	height: 180px;
+	height: 280px;
 	object-fit: cover;
 }
+
+.our-service-card > img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 8px 8px 0 0;
+}
+
+/* Featured Projects Swiper */
+.featured-projects-swiper {
+	margin: 0 auto 40px;
+	position: relative;
+}
+
+.featured-projects-swiper .case-study-card {
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.featured-projects-swiper .case-study-card img {
+	width: 100%;
+	height: auto;
+	max-height: 500px;
+	object-fit: contain;
+}
+
+.featured-projects-swiper .case-study-card .caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	background: linear-gradient(to top, rgba(20, 87, 95, 0.95) 0%, rgba(20, 87, 95, 0.75) 50%, transparent 100%) !important;
+	padding: 40px 25px 20px;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.featured-projects-swiper .case-study-card:hover .caption {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.featured-projects-swiper .caption .d-table,
+.featured-projects-swiper .caption .d-table-cell {
+	display: block;
+}
+
+.featured-projects-swiper .swiper-button-next,
+.featured-projects-swiper .swiper-button-prev {
+	color: #fff;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	margin-top: 0;
+	width: 50px;
+	z-index: 20;
+}
+
+.featured-projects-swiper .swiper-button-prev {
+	left: 0;
+}
+
+.featured-projects-swiper .swiper-button-next {
+	right: 0;
+}
+
+.featured-projects-swiper .swiper-pagination-bullet-active {
+	background: var(--base-light-color);
+}
+
+/* Gallery Projects Row */
+.gallery-projects-swiper {
+	overflow: hidden;
+	position: relative;
+}
+
+.gallery-projects-swiper .swiper-slide {
+	width: 280px;
+	flex-shrink: 0;
+}
+
+.gallery-projects-swiper .gallery-slide-inner {
+	cursor: pointer;
+}
+
+.gallery-projects-swiper .case-study-card {
+	border-radius: 10px;
+	overflow: hidden;
+	height: 200px;
+}
+
+.gallery-projects-swiper .case-study-card .caption {
+	display: none;
+}
+
+.gallery-projects-swiper .case-study-card img {
+	height: 100%;
+}
+
+.gallery-slide-label {
+	text-align: center;
+	padding: 8px 4px 0;
+}
+
+.gallery-slide-label h4 {
+	color: #fff;
+	font-size: 13px;
+	margin: 0;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.gallery-slide-label span {
+	color: #aaa;
+	font-size: 11px;
+}
+
+/* Fade edges on gallery */
+.gallery-projects-swiper::before,
+.gallery-projects-swiper::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 80px;
+	z-index: 10;
+	pointer-events: none;
+}
+
+.gallery-projects-swiper::before {
+	left: 0;
+	background: linear-gradient(to right, var(--base-nav-color), transparent);
+}
+
+.gallery-projects-swiper::after {
+	right: 0;
+	background: linear-gradient(to left, var(--base-nav-color), transparent);
+}
+
+/* Mobile: gallery 2 per row as grid */
+@media (max-width: 767px) {
+	.gallery-projects-swiper .swiper-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		transform: none !important;
+	}
+
+	.gallery-projects-swiper .swiper-slide {
+		width: calc(50% - 8px) !important;
+		margin-bottom: 16px;
+		margin-right: 0;
+	}
+
+	.gallery-projects-swiper .swiper-slide:nth-child(odd) {
+		margin-right: 16px;
+	}
+
+	.gallery-projects-swiper::before,
+	.gallery-projects-swiper::after {
+		display: none;
+	}
+
+	.gallery-projects-swiper .case-study-card {
+		height: 140px;
+	}
+}
+
+/* Volunteering card image carousel */
+.volunteering-img-swiper {
+	width: 100%;
+	border-radius: 8px 8px 0 0;
+	overflow: hidden;
+}
+
+.volunteering-img-swiper img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+.volunteering-img-swiper .swiper-pagination-bullet-active {
+	background: var(--base-light-color);
+}
+
+/* Blue section overrides */
+#webmobile_projects .section-title span {
+	color: #ccc;
+}
+
+#webmobile_projects .section-title h2 {
+	color: #fff;
+}
+
+#webmobile_projects .section-title p {
+	color: #ddd;
+}
+
+/* Oguz Han university slider fix */
+.clients-swiper .swiper-slide {
+	height: auto;
+}
+
+.clients-swiper .clients-slider-item {
+	padding: 20px;
+}
+
+.clients-swiper .client-image img {
+	width: 100%;
+	height: auto;
+	max-height: 400px;
+	object-fit: contain;
+	border-radius: 8px;
+}
+
+.clients-swiper .swiper-button-next,
+.clients-swiper .swiper-button-prev {
+	color: var(--base-light-color);
+}
+
+/* Hero social icons */
+.hero-socials {
+	margin-top: 20px;
+	display: flex;
+	gap: 14px;
+}
+
+.hero-socials a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.15);
+	color: #fff;
+	font-size: 1.3rem;
+	transition: background 0.3s, transform 0.3s;
+}
+
+.hero-socials a:hover {
+	background: var(--base-light-color);
+	transform: scale(1.15);
+	color: #fff;
+}
+
+/* Name styling */
+.name-subtext {
+	font-size: 0.75rem;
+	font-weight: 100;
+	color: #bbb;
+	display: block;
+	letter-spacing: 0.5px;
+}
+
+/* CV button */
+.default-btn {
+	font-size: 1.3rem;
+	font-weight: 700;
+	border-radius: 50px;
+	animation: pulse-btn 2s infinite;
+}
+
+@keyframes pulse-btn {
+	0% { box-shadow: 0 0 0 0 rgba(15, 142, 156, 0.5); }
+	70% { box-shadow: 0 0 0 15px rgba(15, 142, 156, 0); }
+	100% { box-shadow: 0 0 0 0 rgba(15, 142, 156, 0); }
+}
+
+/* Collapsible cards */
+.collapsible-cards > [class*="col-"]:nth-child(n+4) {
+	display: none;
+}
+.collapsible-cards.expanded > [class*="col-"]:nth-child(n+4) {
+	display: flex;
+}
+
+.see-more-btn {
+	background: var(--base-light-color);
+	color: #fff;
+	border: none;
+	padding: 12px 40px;
+	border-radius: 30px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+.see-more-btn:hover {
+	background: var(--base-nav-color);
+}
+
