@@ -1,16 +1,10 @@
 :root {
-	--base-nav-color-old: #4d19a2;
 	--base-nav-color: #14575f;
-	--base-nav-line-color-old: #4b199c;
 	--base-nav-line-color: #185057;
-	--base-nav-light-color-old: #661ae1;
 	--base-nav-light-color: #20737c;
-	--base-light-color-old: #567df4;
 	--base-light-color: #0f8e9c;
 	--yellow-accent-color: #e9b935;
-	--ripple-fade-color-old: rgba(86, 125, 244, 0.3);
 	--ripple-fade-color: rgb(86 226 244 / 30%);
-	--base-light-background-color-old: #f6f4ff;
 	--base-light-background-color: #f4fbfc;
 
 	--green-accent-color: #19ddbc;
@@ -58,8 +52,6 @@
 }
 
 .me_contact_item a {
-	/* display: flex;
-	align-items: center; */
 	cursor: pointer;
 	margin: 0 auto;
 }
@@ -77,10 +69,6 @@
 	font-size: small;
 	color: var(--base-nav-color);
 }
-
-/* .me_contact_info span {
-	width: 40rem!important;
-} */
 
 .highlighted_text {
 	color: var(--base-light-color);
@@ -120,7 +108,6 @@
 	border-radius: 10px;
 	padding: 45px 25px;
 	position: relative;
-	/* margin: 15px 15px 30px 15px; */
 	z-index: 5;
 	margin-bottom: 15px;
 }
@@ -128,7 +115,6 @@
 .me_two_electronic_proj_slider img {
 	border-radius: 5%;
 	border: 3px solid var(--base-light-color);
-	/* position: absolute; */
 }
 
 .me_two_electronic_proj_slider h3 {
@@ -157,29 +143,14 @@
 	justify-content: center;
 }
 
-.me_two_electronics_carousel .owl-item {
-	/* width: 80%!important; */
-	/* max-width: 25px; */
-}
-
 .choose-img {
 	position: relative !important;
 	bottom: -45px;
 }
 
-.choose-us-img {
-}
-
-/* .me_personal_skills span {
-	border: 2px solid var(--base-nav-light-color);
-	border-radius: 4rem;
-	padding: 0.2rem 0.7rem 0.2rem 0.7rem;
-} */
-
 .me_personal_skills img,
 .me_personal_skills span {
 	box-shadow: -1px 1px 5px 0px var(--base-light-color);
-	/* border: 2px solid var(--base-nav-light-color); */
 	border-radius: 10rem;
 	padding: 0.2rem 0.9rem 0.2rem 0.9rem;
 	max-height: 2.2rem;
@@ -187,8 +158,6 @@
 }
 
 .me_personal_skills {
-	/* display: flex;
-	align-items: center; */
 	max-width: 50%;
 	margin: 0 auto;
 }
@@ -210,7 +179,6 @@
 
 .owl-item img {
 	margin: auto;
-	/* height: 100%; */
 }
 
 /* timeline */
