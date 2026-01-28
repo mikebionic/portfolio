@@ -155,6 +155,20 @@
 		});
 	}
 
+	// Swiper: Credly Badges Carousel
+	new Swiper('.badges-swiper', {
+		slidesPerView: 'auto',
+		spaceBetween: 15,
+		loop: true,
+		freeMode: true,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true
+		},
+		speed: 4000
+	});
+
 	// Gallery click: navigate to featured carousel and scroll up (event delegation for loop clones)
 	var featuredSwiperEl = document.querySelector('.featured-projects-swiper');
 	var gallerySwiperEl = document.querySelector('.gallery-projects-swiper');
